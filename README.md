@@ -4,38 +4,39 @@
 
 ### By:
 
-#### Derek Lewis [LinkedIn](http://www.linkedin.com/in/derek-r-lewis) | [GitHub](https://github.com/d-lewis9442)
+#### Derek Lewis | [LinkedIn](http://www.linkedin.com/in/derek-r-lewis) | [GitHub](https://github.com/d-lewis9442)
 
-#### Max Calabro [LinkedIn](https://www.linkedin.com/in/max-calabro) | [GitHub](https://github.com/max-calabro)
+#### Max Calabro | [LinkedIn](https://www.linkedin.com/in/max-calabro) | [GitHub](https://github.com/max-calabro)
 
-#### Aaron Sanchez [LinkedIn](https://www.linkedin.com/in/aaron-g-sanchez) | [GitHub](https://github.com/Aaron-G-Sanchez)
+#### Aaron Sanchez | [LinkedIn](https://www.linkedin.com/in/aaron-g-sanchez) | [GitHub](https://github.com/Aaron-G-Sanchez)
 
 ---
 
 ### **_Description_**
 
-#### Community Garage is a full-stak MERN application that allows you to replicate your vehicles in an online community to share with other gearheads.
+#### BeerBook is a full-stak PERN application that allows users to curate a list of their favorite and least favorite beers. 
 
 ---
 
 ### **_Technologies Used_**
 
-- Mongoose
+- Sequelize
+- Postgres
 - Express
 - React
 - Node
-- Trello [here](https://trello.com/b/eN3OPXkf/community-garage)
+- Trello [here](https://trello.com/b/to67FhS9/beerbook)
 - Deployed on Heroku
 
 ---
 
 ### **_Getting Started_**
 
-##### Take a look around the existing garages and look at other vehicles.
+##### Take a look around the existing beer lists.
 
-##### Create a new vehicle and add your personalized modifications.
+##### Create your own list of most and least guzzleable beers.
 
-##### Choose which garage you want to store your vehicle in.
+##### Add in new local brews.
 
 ##### The project itself was deployed with Heroku.
 
@@ -64,7 +65,6 @@
 ### **_Future Updates_**
 
 - [ ] Deploy project
-- [ ] Allow users to add new Garages
 - [ ] Create a search function
 - [ ] Organize State, Axios Calls, and Data for Best Practice
 
