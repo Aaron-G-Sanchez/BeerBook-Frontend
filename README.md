@@ -14,7 +14,7 @@
 
 ### **_Description_**
 
-#### BeerBook is a full-stak PERN application that allows users to curate a list of their favorite and least favorite beers. 
+#### BeerBook is a full-stack PERN application that allows users to curate a list of their favorite and least favorite beers. 
 
 ---
 
