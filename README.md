@@ -1,10 +1,14 @@
-# Community Garage
+# BeerBook
 
-## Date: 10/28/2022
+## Date: 11/18/2022
 
-### By: Derek Lewis
+### By: Derek Lewis, Max Calabro, Aaron Sanchez
 
 #### [LinkedIn](http://www.linkedin.com/in/derek-r-lewis) | [GitHub](https://github.com/d-lewis9442)
+
+#### [LinkedIn](https://www.linkedin.com/in/max-calabro) | [GitHub](https://github.com/max-calabro)
+
+#### [LinkedIn](https://www.linkedin.com/in/aaron-g-sanchez) | [GitHub](https://github.com/d-lewis9442)
 
 ---
 
