@@ -8,7 +8,7 @@
 
 #### [LinkedIn](https://www.linkedin.com/in/max-calabro) | [GitHub](https://github.com/max-calabro)
 
-#### [LinkedIn](https://www.linkedin.com/in/aaron-g-sanchez) | [GitHub](https://github.com/d-lewis9442)
+#### [LinkedIn](https://www.linkedin.com/in/aaron-g-sanchez) | [GitHub](https://github.com/Aaron-G-Sanchez)
 
 ---
 
