@@ -44,22 +44,6 @@
 
 ### **_Screenshots_**
 
-##### Main Page
-
-![mainpage](https://i.ibb.co/GtHBVz7/homepage.png)
-
-##### Create Vehicle Page
-
-![createvehiclepage](https://i.ibb.co/HpFN85d/addvehicle.png)
-
-##### Vehicle Page
-
-![vehiclepage](https://i.ibb.co/Zc8Lrz7/vehicledetail.png)
-
-##### Garage Page
-
-![garagepage](https://i.ibb.co/jbyWThH/garagepage.png)
-
 ---
 
 ### **_Future Updates_**
