@@ -1,0 +1,32 @@
+main {
+  height: 95vh;
+  width: 90vw;
+  margin: 20px auto;
+}
+
+section{
+  background-color: #EEF0F2;
+  border-radius: 15px;
+}
+
+.user-dash {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+} 
+
+.list-feed {
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+.beer-list {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.users-list{
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
