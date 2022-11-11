@@ -7,10 +7,12 @@ import Landing from './pages/Landing'
 function App() {
   const [user, setUser] = useState(null)
 
+  console.log(user)
+
   return (
     <>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing setUser={setUser} />} />
         <Route path="/home" element={<Home />} />
       </Routes>
     </>

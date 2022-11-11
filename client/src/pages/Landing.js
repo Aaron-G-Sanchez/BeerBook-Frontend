@@ -1,9 +1,9 @@
 import Signin from '../components/Signin'
 
-const Landing = () => {
+const Landing = ({ setUser }) => {
   return (
     <>
-      <Signin />
+      <Signin setUser={setUser} />
     </>
   )
 }
