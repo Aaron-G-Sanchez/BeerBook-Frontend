@@ -1,7 +1,11 @@
-const UserInfo = () => {
+const UserInfo = ({ user }) => {
   return (
     <>
-      <section className="user-info"></section>
+      <section className="user-info">
+        <div>
+          <p>{user.data.name}</p>
+        </div>
+      </section>
     </>
   )
 }

@@ -13,7 +13,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Landing setUser={setUser} />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home user={user} />} />
       </Routes>
     </>
   )

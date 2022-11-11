@@ -1,11 +1,17 @@
+import Beers from '../components/Beers'
+import ListFeed from '../components/ListFeed'
 import UserInfo from '../components/UserInfo'
-import UserList from '../components/UserList'
+import UserMadeList from '../components/UserMadeList'
 
-const Home = () => {
+const Home = ({ user }) => {
   return (
     <>
-      <UserInfo />
-      <UserList />
+      <main className="user-dash">
+        <ListFeed />
+        <Beers />
+        <UserInfo user={user} />
+        <UserMadeList />
+      </main>
     </>
   )
 }
