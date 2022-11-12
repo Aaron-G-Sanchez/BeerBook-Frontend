@@ -31,18 +31,18 @@ section{
   
 }
 
-.description-header {
-  font-size: 50px;
-}
-
 .logo {
 height: 30%;
 }
 
+.description-header {
+  font-size: 50px;
+}
 
 .description-body {
-width: 50%;
+width: 30%;
 height: 50%;
+font-size: 20px;
 }
 
 /* LOGIN FORM */

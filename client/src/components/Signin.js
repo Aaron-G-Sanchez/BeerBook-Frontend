@@ -20,10 +20,12 @@ const Signin = ({ setUser }) => {
           alt="logo"
         />
         <h1 className="description-header">BEERBOOK</h1>
-        <p className="description-body">
-          Welcome to BeerBook. Your one stop shop to remember your favorit
-          beers, as well as tracking beers you want to try.
-        </p>
+        <div className="description-body">
+          <p>
+            Welcome to BeerBook. Your one stop shop to remember your favorit
+            beers, as well as tracking beers you want to try.
+          </p>
+        </div>
       </section>
       <section className="login-form">
         <h2 className="login-header">Sign In</h2>

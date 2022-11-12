@@ -7,8 +7,6 @@ import Landing from './pages/Landing'
 function App() {
   const [user, setUser] = useState(null)
 
-  console.log(user)
-
   return (
     <>
       <Routes>
