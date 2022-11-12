@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { SignInUser } from '../services/Auth'
 
 const Signin = ({ setUser }) => {
@@ -35,6 +35,12 @@ const Signin = ({ setUser }) => {
           <div className="age-consent">
             <input type="checkbox" name="iAm21" />
             <label for="iAm21">I am 21+</label>
+          </div>
+          <div className="register-field">
+            <p>Not a user?</p>
+            <Link>
+              <p>Sign Up</p>
+            </Link>
           </div>
           <button type="submit">Sign In</button>
         </form>

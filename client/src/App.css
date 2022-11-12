@@ -26,9 +26,11 @@ section{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #FFD100;
+  /* background-color: #FFD100; */
   border-radius: 15px 0 0px 15px;
-  
+  background-image: url('../public/assets/images/wave\ \(1\).svg') ;
+  /* background-repeat: none; */
+  background-size: cover;
 }
 
 .logo {
