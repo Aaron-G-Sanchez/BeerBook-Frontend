@@ -9,6 +9,74 @@ section{
   border-radius: 15px;
 }
 
+/* SIGN IN PAGE */
+
+.landing-page {
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* align-items: center; */
+  margin: 5% auto;
+}
+
+/* SIGN IN DESCRIPTION */
+
+.login-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #FFD100; */
+  border-radius: 15px 0 0px 15px;
+  background-image: url('../public/assets/images/wave\ \(1\).svg') ;
+  /* background-repeat: none; */
+  background-size: cover;
+}
+
+.logo {
+height: 30%;
+}
+
+.description-header {
+  font-size: 50px;
+}
+
+.description-body {
+width: 30%;
+height: 50%;
+font-size: 20px;
+}
+
+/* LOGIN FORM */
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  
+}
+
+.login-header{
+  font-size: 30px;
+}
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly ;
+  align-items: center ;
+  height: 50%;
+}
+
+.age-consent {
+  display: flex;
+  width: 100%;
+}
+
+/* HOME PAGE */
+
 .user-dash {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;

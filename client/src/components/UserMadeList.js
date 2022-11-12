@@ -2,7 +2,7 @@ const UserMadeList = () => {
   return (
     <>
       <section className="users-list">
-        <h1>Your Lists</h1>
+        <h1>My Lists</h1>
       </section>
     </>
   )
