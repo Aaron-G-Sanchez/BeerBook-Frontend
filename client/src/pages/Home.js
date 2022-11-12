@@ -5,10 +5,11 @@ import UserMadeList from '../components/UserMadeList'
 import { useEffect } from 'react'
 import { getFeed } from '../services/Queries'
 
-const Home = ({ user }) => {
+const Home = ({ user, setFeed, feed }) => {
   const getListFeed = async () => {
     const feed = await getFeed()
     console.log(feed)
+    setFeed(feed)
   }
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Home = ({ user }) => {
   return (
     <>
       <main className="user-dash">
-        <ListFeed />
+        <ListFeed feed={feed} />
         <Beers />
         <UserInfo user={user} />
         <UserMadeList />
