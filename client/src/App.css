@@ -9,11 +9,17 @@ section{
   border-radius: 15px;
 }
 
-.landing-page{
+/* SIGN IN PAGE */
+
+.landing-page {
   height: 60vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* align-items: center; */
+  margin: 5% auto;
 }
+
+/* SIGN IN DESCRIPTION */
 
 .login-description {
   display: flex;
@@ -22,12 +28,24 @@ section{
   align-items: center;
   background-color: #FFD100;
   border-radius: 15px 0 0px 15px;
+  
+}
+
+.description-header {
+  font-size: 50px;
+}
+
+.logo {
+height: 30%;
 }
 
 
 .description-body {
 width: 50%;
+height: 50%;
 }
+
+/* LOGIN FORM */
 
 .login-form{
   display: flex;
@@ -35,15 +53,27 @@ width: 50%;
   justify-content: center;
   align-items: center;
   border-radius: 0 15px 15px 0;
+  
+}
+
+.login-header{
+  font-size: 30px;
 }
 
 .login-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content:space-evenly ;
+  align-items: center ;
+  height: 50%;
 }
 
+.age-consent {
+  display: flex;
+  width: 100%;
+}
+
+/* HOME PAGE */
 
 .user-dash {
   display: grid;
