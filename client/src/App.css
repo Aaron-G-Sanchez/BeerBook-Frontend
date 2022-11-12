@@ -9,6 +9,42 @@ section{
   border-radius: 15px;
 }
 
+.landing-page{
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.login-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFD100;
+  border-radius: 15px 0 0px 15px;
+}
+
+
+.description-body {
+width: 50%;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+}
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .user-dash {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
