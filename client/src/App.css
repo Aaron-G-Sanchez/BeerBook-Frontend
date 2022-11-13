@@ -232,8 +232,11 @@ width: 20%;
 height: 8%;
 border-radius: 15px;
 background-color: #ffd100;
+color: #EEF0F2;
 border: none;
 transition: .5s;
+font-size: 30px;
+
 }
 
 .add-list-button:hover {
