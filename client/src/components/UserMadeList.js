@@ -2,7 +2,8 @@ const UserMadeList = () => {
   return (
     <>
       <section className="users-list">
-        <h1>My Lists</h1>
+        <h2>My Lists</h2>
+        <button className="add-list-button">+</button>
       </section>
     </>
   )

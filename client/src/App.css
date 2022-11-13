@@ -1,3 +1,5 @@
+/* GENERAL SELECTORS */
+
 main {
   height: 95vh;
   width: 90vw;
@@ -9,10 +11,31 @@ section{
   border-radius: 15px;
 }
 
+input {
+  border-radius: 10px;
+  border: none;
+  padding-left: 10px;
+}
+
+/* input::placeholder{
+  padding-left: 10px ;
+} */
+
+a{
+  text-decoration: none;
+  color: #8AA555;
+  transition: 1s;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+
 /* SIGN IN PAGE */
 
 .landing-page {
-  height: 60vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* align-items: center; */
@@ -28,23 +51,28 @@ section{
   align-items: center;
   /* background-color: #FFD100; */
   border-radius: 15px 0 0px 15px;
-  background-image: url('../public/assets/images/wave\ \(1\).svg') ;
+  /* background-color: rgba(255, 255, 255, 0.749); */
+  background-image: url('../public/assets/images/beerwave.svg') ;
   /* background-repeat: none; */
   background-size: cover;
-}
-
-.logo {
-height: 30%;
+  /* position: relative;
+  overflow: hidden; */
 }
 
 .description-header {
-  font-size: 50px;
+  font-size: 80px;
 }
 
 .description-body {
-width: 30%;
-height: 50%;
-font-size: 20px;
+  width: 40%;
+  height: 50%;
+  font-size: 20px;
+  line-height: 2;
+  font-size: 23px;
+}
+
+.beerbook {
+  color: #8AA555
 }
 
 /* LOGIN FORM */
@@ -58,21 +86,99 @@ font-size: 20px;
   
 }
 
+.logo {
+height: 30%;
+}
+
 .login-header{
-  font-size: 30px;
+  font-size: 50px;
+  margin: 0;
 }
 
 .login-body {
   display: flex;
+  width: 50%;
   flex-direction: column;
   justify-content:space-evenly ;
   align-items: center ;
   height: 50%;
 }
 
+.email{
+  width: 70%;
+  height: 7%;
+}
+
+.password{
+  width: 70%;
+  height: 7%;
+}
+
 .age-consent {
   display: flex;
-  width: 100%;
+  width: 70%;
+}
+
+
+.submit {
+  width: 20%;
+  height: 10%;
+  transition: .7s;
+  border-radius: 15px;
+  border: 1px solid #d6d6d6;
+}
+
+.submit:hover {
+  background-color: #ffd100;
+  scale: 1.1;
+}
+
+/* REGISTER FORM */
+
+.register-page {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* align-items: center; */
+  margin: 5% auto;
+}
+
+.new-user-name {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 7%;
+}
+
+.first-name {
+  width: 40%;
+  height: 100%;
+}
+
+.last-name {
+  width: 40%;
+  height: 100%;
+  
+}
+
+.age-consent-submit{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-submit{
+  height: 150%;
+  width: 30%;
+  border-radius: 15px;
+  border: 1px solid #d6d6d6;
+  transition: .3s;
+}
+
+.register-submit:hover {
+  background-color: #ffd100;
+  scale: 1.1;
 }
 
 /* HOME PAGE */
@@ -87,6 +193,10 @@ font-size: 20px;
 .list-feed {
 grid-row-start: 1;
 grid-row-end: 3;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: auto;
 }
 
 .beer-list {
@@ -97,4 +207,38 @@ grid-row-end: 3;
 .users-list{
   grid-column-start: 3;
   grid-column-end: 4;
+}
+
+/* BEER LIST FEED */
+
+
+.list {
+  width: 80%;
+  margin: 5%;
+  background-color: #ffd100;
+  border-radius: 15px;
+}
+
+/* USER INFO */
+
+.user-icon {
+  width: 30%;
+}
+
+/* USER MADE LIST */
+
+.add-list-button {
+width: 20%;
+height: 8%;
+border-radius: 15px;
+background-color: #ffd100;
+color: #EEF0F2;
+border: none;
+transition: .5s;
+font-size: 30px;
+
+}
+
+.add-list-button:hover {
+  scale: 1.1;
 }

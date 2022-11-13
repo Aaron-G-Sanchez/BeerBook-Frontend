@@ -1,9 +1,16 @@
 const UserInfo = ({ user }) => {
+  console.log(user.data)
   return (
     <>
       <section className="user-info">
         <div>
-          <p>{user.data.name}</p>
+          <img
+            className="user-icon"
+            src="../assets/images/beerbook_logo.svg"
+            alt="logo"
+          />
+          <h2>{user.data.name}</h2>
+          <p>{user.data.email}</p>
         </div>
       </section>
     </>
