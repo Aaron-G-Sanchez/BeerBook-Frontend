@@ -218,3 +218,24 @@ overflow: auto;
   background-color: #ffd100;
   border-radius: 15px;
 }
+
+/* USER INFO */
+
+.user-icon {
+  width: 30%;
+}
+
+/* USER MADE LIST */
+
+.add-list-button {
+width: 20%;
+height: 8%;
+border-radius: 15px;
+background-color: #ffd100;
+border: none;
+transition: .5s;
+}
+
+.add-list-button:hover {
+  scale: 1.1;
+}

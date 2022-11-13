@@ -2,7 +2,7 @@ const ListFeed = ({ feed }) => {
   return (
     <>
       <section className="list-feed">
-        <h1>Recent Lists</h1>
+        <h2>Recent Lists</h2>
 
         {feed
           ? feed.data.map((list) => (
