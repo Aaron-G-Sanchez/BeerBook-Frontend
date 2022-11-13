@@ -39,7 +39,7 @@ const Signin = ({ setUser }) => {
           </div>
           <div className="register-field">
             <p>Not a member?</p>
-            <Link>
+            <Link to="/register">
               <p>Sign Up</p>
             </Link>
           </div>

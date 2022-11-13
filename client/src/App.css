@@ -1,3 +1,5 @@
+/* GENERAL SELECTORS */
+
 main {
   height: 95vh;
   width: 90vw;
@@ -7,6 +9,16 @@ main {
 section{
   background-color: #EEF0F2;
   border-radius: 15px;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+}
+
+a{
+  text-decoration: none;
+  color: #8AA555;
 }
 
 /* SIGN IN PAGE */
@@ -84,15 +96,11 @@ height: 30%;
 .email{
   width: 70%;
   height: 7%;
-  border-radius: 10px;
-  border: none;
 }
 
 .password{
   width: 70%;
   height: 7%;
-  border-radius: 10px;
-  border: none;
 }
 
 .age-consent {
@@ -110,6 +118,54 @@ height: 30%;
 }
 
 .submit:hover {
+  background-color: #ffd100;
+  scale: 1.1;
+}
+
+/* REGISTER FORM */
+
+.register-page {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* align-items: center; */
+  margin: 5% auto;
+}
+
+.new-user-name {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 7%;
+}
+
+.first-name {
+  width: 40%;
+  height: 100%;
+}
+
+.last-name {
+  width: 40%;
+  height: 100%;
+  
+}
+
+.age-consent-submit{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-submit{
+  height: 150%;
+  width: 30%;
+  border-radius: 15px;
+  border: 1px solid #d6d6d6;
+  transition: .3s;
+}
+
+.register-submit:hover {
   background-color: #ffd100;
   scale: 1.1;
 }
