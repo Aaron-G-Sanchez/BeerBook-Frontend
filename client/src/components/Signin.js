@@ -33,10 +33,6 @@ const Signin = ({ setUser }) => {
         <form className="login-body" onSubmit={onSubmit}>
           <input className="email" type="text" placeholder="Email" />
           <input className="password" type="password" placeholder="Password" />
-          <div className="age-consent">
-            <input classNeme="consent" type="checkbox" name="iAm21" />
-            <label for="iAm21">I am 21+</label>
-          </div>
           <div className="register-field">
             <p>Not a member?</p>
             <Link to="/register">
