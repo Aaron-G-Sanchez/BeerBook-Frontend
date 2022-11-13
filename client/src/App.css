@@ -193,6 +193,10 @@ height: 7%;
 .list-feed {
 grid-row-start: 1;
 grid-row-end: 3;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: auto;
 }
 
 .beer-list {
@@ -203,4 +207,14 @@ grid-row-end: 3;
 .users-list{
   grid-column-start: 3;
   grid-column-end: 4;
+}
+
+/* BEER LIST FEED */
+
+
+.list {
+  width: 80%;
+  margin: 5%;
+  background-color: #ffd100;
+  border-radius: 15px;
 }
