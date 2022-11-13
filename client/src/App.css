@@ -12,7 +12,7 @@ section{
 /* SIGN IN PAGE */
 
 .landing-page {
-  height: 60vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* align-items: center; */
@@ -32,20 +32,20 @@ section{
   background-image: url('../public/assets/images/beerwave.svg') ;
   /* background-repeat: none; */
   background-size: cover;
+  /* position: relative;
+  overflow: hidden; */
 }
 
-.logo {
-height: 30%;
-}
+
 
 .description-header {
-  font-size: 50px;
+  font-size: 80px;
 }
 
 .description-body {
-width: 30%;
-height: 50%;
-font-size: 20px;
+  width: 40%;
+  height: 50%;
+  font-size: 20px;
 }
 
 /* LOGIN FORM */
@@ -59,22 +59,43 @@ font-size: 20px;
   
 }
 
+.logo {
+height: 30%;
+}
+
 .login-header{
-  font-size: 30px;
+  font-size: 50px;
+  margin: 0;
 }
 
 .login-body {
   display: flex;
+  width: 50%;
   flex-direction: column;
   justify-content:space-evenly ;
   align-items: center ;
   height: 50%;
 }
 
+.email{
+  width: 70%;
+  height: 7%;
+  border-radius: 10px;
+  border: none;
+}
+
+.password{
+  width: 70%;
+  height: 7%;
+  border-radius: 10px;
+  border: none;
+}
+
 .age-consent {
   display: flex;
-  width: 100%;
+  width: 70%;
 }
+
 
 /* HOME PAGE */
 
