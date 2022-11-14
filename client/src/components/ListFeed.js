@@ -8,7 +8,7 @@ const ListFeed = ({ feed }) => {
           ? feed.data.map((list) => (
               <div key={list.id} className="list">
                 <p className="list-name">{list.name}</p>
-                <p>By: {list.User.name}</p>
+                <p>By: {list.creator.name}</p>
               </div>
             ))
           : null}
