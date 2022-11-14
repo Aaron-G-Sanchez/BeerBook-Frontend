@@ -1,13 +1,21 @@
 import { useNavigate, Link } from 'react-router-dom'
 import { SignInUser } from '../services/Auth'
+import { useState } from 'react'
 
 const Signin = ({ setUser }) => {
   let navigate = useNavigate()
+  const initialState = { email: '', password: '' }
+  const [formValues, setFormValues] = useState(initialState)
+
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+  }
 
   const onSubmit = async (e) => {
     e.preventDefault()
-    const payload = await SignInUser()
+    const payload = await SignInUser(formValues)
     setUser(payload)
+    setFormValues(initialState)
     navigate('/home')
   }
 
@@ -31,15 +39,35 @@ const Signin = ({ setUser }) => {
         />
         <h2 className="login-header">Sign In</h2>
         <form className="login-body" onSubmit={onSubmit}>
-          <input className="email" type="text" placeholder="Email" />
-          <input className="password" type="password" placeholder="Password" />
+          <input
+            onChange={handleChange}
+            className="email"
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={formValues.email}
+            required
+          />
+          <input
+            onChange={handleChange}
+            className="password"
+            name="password"
+            type="password"
+            value={formValues.password}
+            placeholder="Password"
+            required
+          />
           <div className="register-field">
             <p>Not a member?</p>
             <Link to="/register">
               <p>Sign Up</p>
             </Link>
           </div>
-          <button className="submit" type="submit">
+          <button
+            className="submit"
+            type="submit"
+            disabled={!formValues.email || !formValues.password}
+          >
             Sign In
           </button>
         </form>
@@ -49,7 +77,3 @@ const Signin = ({ setUser }) => {
 }
 
 export default Signin
-
-{
-  /* <button onClick={onClick}>Signin</button> */
-}
