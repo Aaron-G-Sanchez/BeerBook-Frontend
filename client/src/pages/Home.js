@@ -1,11 +1,15 @@
+import { useState, useEffect } from 'react'
 import Beers from '../components/Beers'
 import ListFeed from '../components/ListFeed'
 import UserInfo from '../components/UserInfo'
 import UserMadeList from '../components/UserMadeList'
-import { useEffect } from 'react'
+import SelectedBeer from '../components/SelectedBeer'
 import { getAllBeers, getFeed } from '../services/Queries'
 
 const Home = ({ user, feed, setFeed, setBeer, beer }) => {
+  const [toggle, setToggle] = useState(false)
+
+  // Axios calls to get the user made feed and all the beers
   const getListFeed = async () => {
     const feed = await getFeed()
     setFeed(feed)
@@ -26,7 +30,8 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
     <>
       <main className="user-dash">
         <ListFeed feed={feed} />
-        <Beers beer={beer} />
+        <Beers beer={beer} toggle={toggle} setToggle={setToggle} />
+        <SelectedBeer toggle={toggle} />
         <UserInfo user={user} />
         <UserMadeList />
       </main>

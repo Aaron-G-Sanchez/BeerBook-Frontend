@@ -182,7 +182,7 @@ height: 7%;
 .user-dash {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 2fr;
   gap: 30px;
 } 
 
@@ -204,7 +204,13 @@ overflow: auto;
 }
 
 .users-list{
-  grid-row: 2/-1;
+  overflow: auto;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* USER CREATED BEER LIST FEED */
@@ -254,9 +260,16 @@ overflow: auto;
 
 
 /* USER INFO */
+.avatar-container {
+  width: 50%;
+}
 
 .user-icon {
-  width: 30%;
+  width: 60%;
+}
+
+.user-info-container{
+  width: 60%;
 }
 
 .log-out {
@@ -279,7 +292,7 @@ background-color: #ffd100;
 color: #EEF0F2;
 border: none;
 transition: .5s;
-font-size: 30px;
+font-size: 150%;
 
 }
 

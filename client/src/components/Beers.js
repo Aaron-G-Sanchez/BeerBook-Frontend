@@ -1,7 +1,8 @@
-const Beers = ({ beer }) => {
+const Beers = ({ beer, toggle, setToggle }) => {
   // Gets the beer id when the div is clicked
   const selectBeer = (id) => {
-    console.log(id)
+    setToggle(!toggle)
+    // console.log(id)
   }
 
   return (
