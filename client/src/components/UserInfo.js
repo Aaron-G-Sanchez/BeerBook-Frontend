@@ -1,5 +1,5 @@
 const UserInfo = ({ user }) => {
-  console.log(user.data)
+  // console.log(user.data)
   return (
     <>
       <section className="user-info">
