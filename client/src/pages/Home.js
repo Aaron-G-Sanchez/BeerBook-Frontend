@@ -32,8 +32,8 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
         <ListFeed feed={feed} />
         <Beers beer={beer} toggle={toggle} setToggle={setToggle} />
         <SelectedBeer toggle={toggle} />
-        <UserInfo user={user} />
         <UserMadeList />
+        <UserInfo user={user} />
       </main>
     </>
   )
