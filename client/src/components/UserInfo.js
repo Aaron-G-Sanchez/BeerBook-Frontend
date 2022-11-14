@@ -11,6 +11,7 @@ const UserInfo = ({ user }) => {
           />
           <h2>{user.data.name}</h2>
           <p>{user.data.email}</p>
+          <button className="log-out">Log Out</button>
         </div>
       </section>
     </>

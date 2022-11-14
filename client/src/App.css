@@ -199,7 +199,6 @@ overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-evenly;  */
   overflow: auto;
 
 }
@@ -208,7 +207,7 @@ overflow: auto;
   grid-row: 2/-1;
 }
 
-/* BEER LIST FEED */
+/* USER CREATED BEER LIST FEED */
 
 
 .list {
@@ -218,7 +217,7 @@ overflow: auto;
   border-radius: 15px;
 }
 
-/* ALL BEER DISPLAY */
+/* ALL BEERS DISPLAY */
 
 .beer-wrapper {
   overflow: auto;
@@ -227,7 +226,7 @@ overflow: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px
+  gap: 30px
 }
 
 .beer-wrapper::-webkit-scrollbar {
@@ -241,8 +240,16 @@ overflow: auto;
   border-radius: 15px;
 }
 
-.beer-image {
-  width: 20%;
+.beer-name {
+  margin: 10px;
+}
+
+.brewery {
+  margin: 0;
+}
+
+.beer-maker {
+  margin: 0 5px;
 }
 
 
@@ -250,6 +257,16 @@ overflow: auto;
 
 .user-icon {
   width: 30%;
+}
+
+.log-out {
+  transition: .3s;
+}
+
+.log-out:hover {
+  scale: 1.1;
+  background-color: #ffd100;
+  border: none;
 }
 
 /* USER MADE LIST */

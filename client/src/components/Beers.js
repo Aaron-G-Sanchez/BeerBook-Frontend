@@ -7,13 +7,9 @@ const Beers = ({ beer }) => {
           {beer
             ? beer.data.map((beer) => (
                 <div key={beer.id} className="single-beer">
-                  <h3>{beer.name}</h3>
-                  <p>{beer.brewery}</p>
-                  {/* <img
-                    className="beer-image"
-                    src={beer.image}
-                    alt="picture-of-beer"
-                  /> */}
+                  <h3 className="beer-name">{beer.name}</h3>
+                  <h4 className="brewery">Brewery:</h4>
+                  <p className="beer-maker">{beer.brewery}</p>
                 </div>
               ))
             : null}
