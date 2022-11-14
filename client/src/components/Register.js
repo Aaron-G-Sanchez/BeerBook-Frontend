@@ -1,10 +1,29 @@
 import { useNavigate } from 'react-router-dom'
+import { RegisterUser } from '../services/Auth'
+import { useState } from 'react'
 
 const Register = () => {
   let navigate = useNavigate()
+  const initialState = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
+  }
+  const [formValues, setFormValues] = useState(initialState)
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    await RegisterUser({
+      name: `${formValues.firstName} ${formValues.lastName}`,
+      email: formValues.email,
+      password: formValues.password
+    })
+    setFormValues(initialState)
     navigate('/')
   }
 
@@ -31,26 +50,70 @@ const Register = () => {
             <h2 className="login-header">Register</h2>
             <form className="login-body" onSubmit={handleSubmit}>
               <div className="new-user-name">
-                <input className="first-name" type="text" placeholder="First" />
-                <input className="last-name" type="text" placeholder="Last " />
+                <input
+                  onChange={handleChange}
+                  className="first-name"
+                  name="firstName"
+                  type="text"
+                  placeholder="First"
+                  value={formValues.firstName}
+                  required
+                />
+                <input
+                  onChange={handleChange}
+                  className="last-name"
+                  name="lastName"
+                  type="text"
+                  placeholder="Last"
+                  value={formValues.lastName}
+                  required
+                />
               </div>
-              <input className="email" type="text" placeholder="Email" />
               <input
-                className="password"
-                type="password"
-                placeholder="Password"
+                onChange={handleChange}
+                className="email"
+                name="email"
+                type="text"
+                placeholder="Email"
+                value={formValues.email}
               />
               <input
+                onChange={handleChange}
                 className="password"
+                name="password"
+                type="password"
+                placeholder="Password"
+                value={formValues.password}
+                required
+              />
+              <input
+                onChange={handleChange}
+                className="password"
+                name="passwordConfirm"
                 type="password"
                 placeholder="Confirm Password"
+                value={formValues.confirmPassword}
+                required
               />
               <div className="age-consent-submit">
                 <div className="age-consent">
-                  <input classNeme="consent" type="checkbox" name="iAm21" />
-                  <label for="iAm21">I am 21+</label>
+                  <input
+                    className="consent"
+                    type="checkbox"
+                    name="iAm21"
+                    required
+                  />
+                  <label htmlFor="iAm21">I am 21+</label>
                 </div>
-                <button className="register-submit" type="submit">
+                <button
+                  disabled={
+                    !formValues.email ||
+                    (!formValues.password &&
+                      formValues.confirmPassword === formValues.password)
+                  }
+                  className="register-submit"
+                  type="submit"
+                >
                   Join
                 </button>
               </div>
