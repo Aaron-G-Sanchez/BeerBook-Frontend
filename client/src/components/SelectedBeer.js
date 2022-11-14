@@ -1,14 +1,20 @@
-const SelectedBeer = ({ id, beer, selectedBeer, setSelectedBeer }) => {
-  if (beer) {
-    setSelectedBeer(beer.data.find((beer) => beer.id === id))
-  }
+const SelectedBeer = ({ selectedBeer }) => {
+  // if (beer) {
+  //   setSelectedBeer(beer.data.find((beer) => beer.id === id))
+  // }
+  console.log(selectedBeer)
 
   return (
     <>
       <section>
-        {id ? (
+        {selectedBeer ? (
           <div>
             <h2>{selectedBeer.name}</h2>
+            <h3>{selectedBeer.brewery}</h3>
+            <img className="beer-image" src={selectedBeer.image} />
+            <p>
+              ABV: <span>{selectedBeer.abv}</span>
+            </p>
           </div>
         ) : (
           <div>

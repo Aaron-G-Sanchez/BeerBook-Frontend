@@ -7,7 +7,6 @@ import SelectedBeer from '../components/SelectedBeer'
 import { getAllBeers, getFeed } from '../services/Queries'
 
 const Home = ({ user, feed, setFeed, setBeer, beer }) => {
-  const [id, setId] = useState(null)
   const [selectedBeer, setSelectedBeer] = useState(null)
 
   // Axios calls to get the user made feed and all the beers
@@ -31,9 +30,8 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
     <>
       <main className="user-dash">
         <ListFeed feed={feed} />
-        <Beers beer={beer} id={id} setId={setId} />
+        <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
         <SelectedBeer
-          id={id}
           beer={beer}
           selectedBeer={selectedBeer}
           setSelectedBeer={setSelectedBeer}

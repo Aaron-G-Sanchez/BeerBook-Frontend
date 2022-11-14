@@ -1,8 +1,9 @@
-const Beers = ({ beer, id, setId }) => {
+const Beers = ({ beer, id, setId, setSelectedBeer }) => {
   // Gets the beer id when the div is clicked
   const selectBeer = (id) => {
-    setId(id)
-    console.log(id)
+    if (beer) {
+      setSelectedBeer(beer.data.find((beer) => beer.id === id))
+    }
   }
 
   return (

@@ -258,6 +258,12 @@ overflow: auto;
   margin: 0 5px;
 }
 
+/* MORE INFO DISPLAY */
+
+.beer-image {
+  width: 25%;
+}
+
 
 /* USER INFO */
 .avatar-container {
