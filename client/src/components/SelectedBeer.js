@@ -1,9 +1,4 @@
 const SelectedBeer = ({ selectedBeer }) => {
-  // if (beer) {
-  //   setSelectedBeer(beer.data.find((beer) => beer.id === id))
-  // }
-  console.log(selectedBeer)
-
   return (
     <>
       <section>

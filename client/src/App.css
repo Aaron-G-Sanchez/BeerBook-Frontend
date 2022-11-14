@@ -6,10 +6,10 @@ main {
   margin: 20px auto;
 }
 
-section{
+section {
   background-color: rgba(238, 240, 242, .9);
   border-radius: 15px;
-  filter: drop-shadow(7px 10px 10px rgba(51, 53, 51, .1));
+  filter: drop-shadow(0px 0px 10px rgba(51, 53, 51, .1));
 
 }
 
@@ -19,7 +19,7 @@ input {
   padding-left: 10px;
 }
 
-a{
+a {
   text-decoration: none;
   color: #8AA555;
   transition: 1s;
@@ -29,6 +29,10 @@ a:hover{
   text-decoration: underline;
 }
 
+button {
+  background-image: url('../public/assets/images/beerwave.svg');
+  background-size: cover;
+}
 
 /* SIGN IN PAGE */
 
@@ -75,7 +79,7 @@ a:hover{
 
 /* LOGIN FORM */
 
-.login-form{
+.login-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,7 +92,7 @@ a:hover{
 height: 30%;
 }
 
-.login-header{
+.login-header {
   font-size: 50px;
   margin: 0;
 }
@@ -102,12 +106,12 @@ height: 30%;
   height: 50%;
 }
 
-.email{
+.email {
   width: 70%;
   height: 7%;
 }
 
-.password{
+.password {
   width: 70%;
   height: 7%;
 }
@@ -159,14 +163,14 @@ height: 7%;
   
 }
 
-.age-consent-submit{
+.age-consent-submit {
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.register-submit{
+.register-submit {
   height: 150%;
   width: 30%;
   border-radius: 15px;
@@ -209,10 +213,14 @@ overflow: auto;
   overflow: auto;
 }
 
-.user-info{
+.user-info {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.new-list {
+  grid-row: 1/4;
 }
 
 /* USER CREATED BEER LIST FEED */
@@ -242,7 +250,7 @@ overflow: auto;
   display: none;
 }
 
-.single-beer{
+.single-beer {
   width: 20%;
   height: 20%;
   background-color: #ffd100;
@@ -270,6 +278,39 @@ overflow: auto;
   margin: 0 5px;
 }
 
+
+/* NEW LIST CREATION FORM */
+.new-list-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+}
+
+
+.new-list-input {
+  width: 80%;
+  height: 30px;
+}
+
+.new-list-submit {
+  width: 10%;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #d6d6d6;
+  border: none;
+  transition: .3s;
+}
+
+.new-list-submit:hover {
+  scale: 1.1;
+  background-color: #ffd100;
+  border: none;
+}
+
+
+
 /* MORE INFO DISPLAY */
 
 .beer-image {
@@ -286,12 +327,18 @@ overflow: auto;
   width: 60%;
 }
 
-.user-info-container{
+.user-info-container {
   width: 60%;
 }
 
 .log-out {
+  width: 40%;
+  background-color: #d6d6d6;
+  background-image: none;
+  height: 20px;
   transition: .3s;
+  border: none;
+  border-radius: 15px;
 }
 
 .log-out:hover {
@@ -306,8 +353,8 @@ overflow: auto;
 width: 20%;
 height: 8%;
 border-radius: 15px;
-background-color: #ffd100;
-color: #EEF0F2;
+background-color: #d6d6d6;
+color: #333533;
 border: none;
 transition: .5s;
 font-size: 150%;
@@ -315,5 +362,6 @@ font-size: 150%;
 }
 
 .add-list-button:hover {
+  background-color: #ffd100;
   scale: 1.1;
 }
