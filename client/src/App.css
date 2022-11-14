@@ -7,8 +7,10 @@ main {
 }
 
 section{
-  background-color: #EEF0F2;
+  background-color: rgba(238, 240, 242, .9);
   border-radius: 15px;
+  filter: drop-shadow(7px 10px 10px rgba(51, 53, 51, .1));
+
 }
 
 input {
@@ -223,6 +225,7 @@ overflow: auto;
   border-radius: 15px;
 }
 
+
 /* ALL BEERS DISPLAY */
 
 .beer-wrapper {
@@ -244,6 +247,15 @@ overflow: auto;
   height: 20%;
   background-color: #ffd100;
   border-radius: 15px;
+  transition: .5s;
+  /* background-image: url('../public/assets/images/beerwave.svg');
+  background-size:  cover; */
+}
+
+.single-beer:hover {
+  scale: 1.05;
+  background-color: #d6d6d6;
+
 }
 
 .beer-name {
