@@ -1,13 +1,23 @@
-const CreateNewList = ({ toggle, setToggle, formValue, setFormValue }) => {
-  const handleSubmit = (e) => {
+import { createBeerList } from '../services/Queries'
+
+const CreateNewList = ({
+  toggle,
+  setToggle,
+  formValue,
+  setFormValue,
+  initialState
+}) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setToggle(!toggle)
-    // setFormValue('')
+    await createBeerList({ name: formValue.name })
+    setFormValue(initialState)
   }
 
   const handleChange = (e) => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value })
   }
+
   return (
     <>
       <section className="new-list">

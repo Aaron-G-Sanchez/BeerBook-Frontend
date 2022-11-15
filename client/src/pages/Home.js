@@ -60,6 +60,7 @@ const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
             setToggle={setToggle}
             formValue={formValue}
             setFormValue={setFormValue}
+            initialState={initialState}
             // handleChange={handleChange}
           />
         ) : (

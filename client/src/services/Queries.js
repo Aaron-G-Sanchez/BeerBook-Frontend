@@ -32,7 +32,8 @@ export const getUser = async (id) => {
 // Call to create a new list
 export const createBeerList = async (data) => {
   try {
-    await Client.post('/beerlist', { data })
+    const response = await Client.post('/beerlist', data)
+    return response
   } catch (error) {
     throw error
   }
