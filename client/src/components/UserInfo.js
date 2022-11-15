@@ -1,5 +1,5 @@
-const UserInfo = ({ user }) => {
-  // console.log(user.data)
+
+const UserInfo = ({ data }) => {
   return (
     <>
       <section className="user-info">
@@ -11,9 +11,10 @@ const UserInfo = ({ user }) => {
           />
         </div>
         <div className="user-info-container">
-          <h2>{user.data.name}</h2>
-          {/* <p>{user.data.email}</p> */}
+          <h2>{data?.name}</h2>
+          {/* <p>{data?.email}</p> */}
           <button className="log-out">Log Out</button>
+
         </div>
       </section>
     </>

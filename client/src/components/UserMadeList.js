@@ -1,9 +1,11 @@
-const UserMadeList = ({ toggle, setToggle }) => {
+
+const UserMadeList = ({ data, toggle, setToggle }) => {
+  console.log(data)
   const handleClick = (e) => {
     setToggle(!toggle)
     console.log(toggle)
   }
-
+  
   return (
     <>
       <section className="users-list">

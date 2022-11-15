@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import ListFeed from '../components/ListFeed'
 import UserInfo from '../components/UserInfo'
 import UserMadeList from '../components/UserMadeList'
+import { getFeed, getUser } from '../services/Queries'
 import SelectedBeer from '../components/SelectedBeer'
 import { getAllBeers, getFeed } from '../services/Queries'
 import CreateNewList from '../components/CreateNewList'
@@ -11,8 +12,8 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
   const [selectedBeer, setSelectedBeer] = useState(null)
   const [toggle, setToggle] = useState(false)
   const [formValue, setFormValue] = useState('')
+  const [data, setData] = useState()
 
-  // Axios calls to get the user made feed and all the beers
   const getListFeed = async () => {
     const feed = await getFeed()
     setFeed(feed)
@@ -22,12 +23,21 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
     const beer = await getAllBeers()
     // console.log(beer)
     setBeer(beer)
+
+  const userId = async () => {
+    let id = user.id
+    console.log(user.id)
+    const response = await getUser(`${id}`)
+    setData(response.data)
+
   }
 
   useEffect(() => {
     getListFeed()
     getBeer()
+    userId()
   }, [])
+
 
   const handleChange = (e) => {
     setFormValue(e.target.value)
@@ -37,6 +47,7 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
     <>
       <main className="user-dash">
         <ListFeed feed={feed} />
+
         {toggle ? (
           <CreateNewList
             toggle={toggle}
@@ -53,8 +64,9 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
           selectedBeer={selectedBeer}
           setSelectedBeer={setSelectedBeer}
         />
-        <UserMadeList toggle={toggle} setToggle={setToggle} />
-        <UserInfo user={user} />
+        <UserMadeList data={data} toggle={toggle} setToggle={setToggle} />
+        <UserInfo data={data} user={user} />
+
       </main>
     </>
   )

@@ -19,3 +19,12 @@ export const getAllBeers = async () => {
     throw error
   }
 }
+
+export const getUser = async (id) => {
+  try {
+    const response = await Client.get(`/user/${id}`)
+    return response
+  } catch (error) {
+    throw error
+  }
+}
