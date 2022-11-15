@@ -12,8 +12,8 @@ const SelectedBeer = ({ selectedBeer }) => {
             </p>
           </div>
         ) : (
-          <div>
-            <p>Select a beer for more info!</p>
+          <div className="beer-guide">
+            <h2>Select a beer for more info!</h2>
           </div>
         )}
       </section>

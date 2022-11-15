@@ -10,6 +10,7 @@ import CreateNewList from '../components/CreateNewList'
 const Home = ({ user, feed, setFeed, setBeer, beer }) => {
   const [selectedBeer, setSelectedBeer] = useState(null)
   const [toggle, setToggle] = useState(false)
+  const [formValue, setFormValue] = useState('')
 
   // Axios calls to get the user made feed and all the beers
   const getListFeed = async () => {
@@ -28,12 +29,22 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
     getBeer()
   }, [])
 
+  const handleChange = (e) => {
+    setFormValue(e.target.value)
+  }
+
   return (
     <>
       <main className="user-dash">
         <ListFeed feed={feed} />
         {toggle ? (
-          <CreateNewList />
+          <CreateNewList
+            toggle={toggle}
+            setToggle={setToggle}
+            formValue={formValue}
+            setFormValue={setFormValue}
+            handleChange={handleChange}
+          />
         ) : (
           <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
         )}

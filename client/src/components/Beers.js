@@ -1,4 +1,4 @@
-const Beers = ({ beer, id, setId, setSelectedBeer }) => {
+const Beers = ({ beer, setSelectedBeer }) => {
   // Gets the beer id when the div is clicked
   const selectBeer = (id) => {
     if (beer) {

@@ -127,11 +127,12 @@ height: 30%;
   height: 10%;
   transition: .7s;
   border-radius: 15px;
-  border: 1px solid #d6d6d6;
+  background-color: #ffd100;
+  border: none;
 }
 
 .submit:hover {
-  background-color: #ffd100;
+  background-color: #d6d6d6;
   scale: 1.1;
 }
 
@@ -141,7 +142,6 @@ height: 30%;
   height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* align-items: center; */
   margin: 5% auto;
 }
 
@@ -174,12 +174,13 @@ height: 7%;
   height: 150%;
   width: 30%;
   border-radius: 15px;
-  border: 1px solid #d6d6d6;
+  background-color: #ffd100;
+  border: none;
   transition: .3s;
 }
 
 .register-submit:hover {
-  background-color: #ffd100;
+  background-color: #d6d6d6;
   scale: 1.1;
 }
 
@@ -262,7 +263,7 @@ overflow: auto;
 
 .single-beer:hover {
   scale: 1.05;
-  background-color: #d6d6d6;
+  background-color: #8AA555;
 
 }
 
@@ -298,14 +299,14 @@ overflow: auto;
   width: 10%;
   height: 30px;
   border-radius: 15px;
-  background-color: #d6d6d6;
+  background-color: #ffd100;
   border: none;
   transition: .3s;
 }
 
 .new-list-submit:hover {
   scale: 1.1;
-  background-color: #ffd100;
+  background-color: #d6d6d6;
   border: none;
 }
 
@@ -335,7 +336,7 @@ overflow: auto;
   width: 40%;
   background-color: #d6d6d6;
   background-image: none;
-  height: 20px;
+  height: 30px;
   transition: .3s;
   border: none;
   border-radius: 15px;
@@ -353,7 +354,7 @@ overflow: auto;
 width: 20%;
 height: 8%;
 border-radius: 15px;
-background-color: #d6d6d6;
+background-color: #ffd100;
 color: #333533;
 border: none;
 transition: .5s;
@@ -362,6 +363,6 @@ font-size: 150%;
 }
 
 .add-list-button:hover {
-  background-color: #ffd100;
+  background-color: #d6d6d6;
   scale: 1.1;
 }
