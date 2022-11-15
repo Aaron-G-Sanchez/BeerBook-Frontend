@@ -7,7 +7,7 @@ main {
 }
 
 section {
-  background-color: rgba(238, 240, 242, .9);
+  background-color: #eef0f2;
   border-radius: 15px;
   filter: drop-shadow(0px 0px 10px rgba(51, 53, 51, .1));
 
@@ -277,6 +277,18 @@ overflow: auto;
 
 .beer-maker {
   margin: 0 5px;
+}
+
+.add-to-list {
+  background-color: #ffd100;
+  border: none;
+  transition: .3s;
+  margin: 5px;
+}
+
+.add-to-list:hover {
+  background-color: #d6d6d6;
+  scale: 1.05;
 }
 
 

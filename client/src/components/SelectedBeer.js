@@ -10,6 +10,7 @@ const SelectedBeer = ({ selectedBeer }) => {
             <p>
               ABV: <span>{selectedBeer.abv}</span>
             </p>
+            <button className="add-to-list">Add to list!</button>
           </div>
         ) : (
           <div className="beer-guide">
