@@ -42,7 +42,6 @@ const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
     userId()
   }, [user])
 
-  console.log(formValue)
   // const handleChange = (e) => {
   //   setFormValue({ ...formValue, [e.target.name]: e.target.value })
   // }
