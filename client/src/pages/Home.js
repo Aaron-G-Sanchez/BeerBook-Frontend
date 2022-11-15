@@ -42,9 +42,9 @@ const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
     userId()
   }, [user])
 
-  const handleChange = (e) => {
-    setFormValue({ ...formValue, [e.target.name]: e.target.value })
-  }
+  // const handleChange = (e) => {
+  //   setFormValue({ ...formValue, [e.target.name]: e.target.value })
+  // }
 
   return (
     <>
@@ -60,7 +60,7 @@ const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
             setToggle={setToggle}
             formValue={formValue}
             setFormValue={setFormValue}
-            handleChange={handleChange}
+            // handleChange={handleChange}
           />
         ) : (
           <Beers beer={beer} setSelectedBeer={setSelectedBeer} />

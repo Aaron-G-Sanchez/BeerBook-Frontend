@@ -1,10 +1,13 @@
-const CreateNewList = ({ toggle, setToggle, formValue, handleChange }) => {
+const CreateNewList = ({ toggle, setToggle, formValue, setFormValue }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setToggle(!toggle)
     // setFormValue('')
   }
 
+  const handleChange = (e) => {
+    setFormValue({ ...formValue, [e.target.name]: e.target.value })
+  }
   return (
     <>
       <section className="new-list">
