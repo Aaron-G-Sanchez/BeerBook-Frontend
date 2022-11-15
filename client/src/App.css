@@ -6,9 +6,11 @@ main {
   margin: 20px auto;
 }
 
-section{
-  background-color: #EEF0F2;
+section {
+  background-color: #eef0f2;
   border-radius: 15px;
+  filter: drop-shadow(0px 0px 10px rgba(51, 53, 51, .1));
+
 }
 
 input {
@@ -17,11 +19,7 @@ input {
   padding-left: 10px;
 }
 
-/* input::placeholder{
-  padding-left: 10px ;
-} */
-
-a{
+a {
   text-decoration: none;
   color: #8AA555;
   transition: 1s;
@@ -29,6 +27,11 @@ a{
 
 a:hover{
   text-decoration: underline;
+}
+
+button {
+  background-image: url('../public/assets/images/beerwaveTwo.svg');
+  background-size: cover;
 }
 
 
@@ -41,6 +44,7 @@ a:hover{
   /* align-items: center; */
   margin: 5% auto;
 }
+
 
 /* SIGN IN DESCRIPTION */
 
@@ -75,9 +79,10 @@ a:hover{
   color: #8AA555
 }
 
+
 /* LOGIN FORM */
 
-.login-form{
+.login-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +95,7 @@ a:hover{
 height: 30%;
 }
 
-.login-header{
+.login-header {
   font-size: 50px;
   margin: 0;
 }
@@ -104,12 +109,12 @@ height: 30%;
   height: 50%;
 }
 
-.email{
+.email {
   width: 70%;
   height: 7%;
 }
 
-.password{
+.password {
   width: 70%;
   height: 7%;
 }
@@ -125,13 +130,15 @@ height: 30%;
   height: 10%;
   transition: .7s;
   border-radius: 15px;
-  border: 1px solid #d6d6d6;
+  background-color: #ffd100;
+  border: none;
 }
 
 .submit:hover {
-  background-color: #ffd100;
+  background-color: #d6d6d6;
   scale: 1.1;
 }
+
 
 /* REGISTER FORM */
 
@@ -139,7 +146,6 @@ height: 30%;
   height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* align-items: center; */
   margin: 5% auto;
 }
 
@@ -161,38 +167,39 @@ height: 7%;
   
 }
 
-.age-consent-submit{
+.age-consent-submit {
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.register-submit{
+.register-submit {
   height: 150%;
   width: 30%;
   border-radius: 15px;
-  border: 1px solid #d6d6d6;
+  background-color: #ffd100;
+  border: none;
   transition: .3s;
 }
 
 .register-submit:hover {
-  background-color: #ffd100;
+  background-color: #d6d6d6;
   scale: 1.1;
 }
+
 
 /* HOME PAGE */
 
 .user-dash {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 2fr 2fr 1fr;
   gap: 30px;
 } 
 
 .list-feed {
-grid-row-start: 1;
-grid-row-end: 3;
+grid-row: 1/4;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -200,17 +207,30 @@ overflow: auto;
 }
 
 .beer-list {
-  grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row: 1/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
 }
 
 .users-list{
-  grid-column-start: 3;
-  grid-column-end: 4;
+  overflow: auto;
 }
 
-/* BEER LIST FEED */
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
+.new-list {
+  grid-row: 1/4;
+}
+
+
+/* USER CREATED BEER LIST FEED */
 
 .list {
   width: 80%;
@@ -219,11 +239,139 @@ overflow: auto;
   border-radius: 15px;
 }
 
+
+/* ALL BEERS DISPLAY */
+
+.beer-wrapper {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px
+}
+
+.beer-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.single-beer {
+  width: 20%;
+  height: 20%;
+  background-color: #ffd100;
+  border-radius: 15px;
+  transition: .5s;
+  background-image: url('../public/assets/images/beerwaveTwo.svg');
+  background-size: cover;
+  overflow: auto;
+
+}
+
+.single-beer:hover {
+  scale: 1.02;
+  background-color: #d6d6d6;
+
+}
+
+.beer-name {
+  margin: 10px;
+}
+
+.brewery {
+  margin: 0;
+}
+
+.beer-maker {
+  margin: 0 5px;
+}
+
+
+/* NEW LIST CREATION FORM */
+
+.new-list-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+}
+
+
+.new-list-input {
+  width: 80%;
+  height: 30px;
+}
+
+.new-list-submit {
+  width: 10%;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ffd100;
+  border: none;
+  transition: .3s;
+}
+
+.new-list-submit:hover {
+  scale: 1.1;
+  background-color: #d6d6d6;
+  border: none;
+}
+
+
+/* MORE INFO DISPLAY */
+
+.beer-image {
+  width: 25%;
+}
+
+.display-name {
+  margin: 10px;
+}
+
+.add-to-list {
+  background-color: #ffd100;
+  border: none;
+  transition: .3s;
+  margin: 10px;
+}
+
+.add-to-list:hover {
+  background-color: #ffd100;
+  scale: 1.05;
+}
+
+
 /* USER INFO */
 
-.user-icon {
-  width: 30%;
+.avatar-container {
+  width: 50%;
 }
+
+.user-icon {
+  width: 60%;
+}
+
+.user-info-container {
+  width: 60%;
+}
+
+.log-out {
+  width: 40%;
+  background-color: #d6d6d6;
+  background-image: none;
+  height: 30px;
+  transition: .3s;
+  border: none;
+  border-radius: 15px;
+}
+
+.log-out:hover {
+  scale: 1.1;
+  background-color: #ffd100;
+  border: none;
+}
+
 
 /* USER MADE LIST */
 
@@ -232,13 +380,14 @@ width: 20%;
 height: 8%;
 border-radius: 15px;
 background-color: #ffd100;
-color: #EEF0F2;
+color: #333533;
 border: none;
 transition: .5s;
-font-size: 30px;
+font-size: 150%;
 
 }
 
 .add-list-button:hover {
+  background-color: #ffd100;
   scale: 1.1;
 }

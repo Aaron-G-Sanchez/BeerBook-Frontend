@@ -1,10 +1,20 @@
-const UserMadeList = ({ data }) => {
+
+const UserMadeList = ({ data, toggle, setToggle }) => {
   console.log(data)
+  const handleClick = (e) => {
+    setToggle(!toggle)
+    console.log(toggle)
+  }
+  
   return (
     <>
       <section className="users-list">
         <h2>My Lists</h2>
-        <button className="add-list-button">+</button>
+        <div>
+          <button className="add-list-button" onClick={handleClick}>
+            +
+          </button>
+        </div>
       </section>
     </>
   )

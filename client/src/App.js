@@ -10,6 +10,7 @@ import Register from './components/Register'
 function App() {
   const [user, setUser] = useState(null)
   const [feed, setFeed] = useState(null)
+  const [beer, setBeer] = useState(null)
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -30,7 +31,15 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route
           path="/home"
-          element={<Home user={user} setFeed={setFeed} feed={feed} />}
+          element={
+            <Home
+              user={user}
+              feed={feed}
+              setFeed={setFeed}
+              beer={beer}
+              setBeer={setBeer}
+            />
+          }
         />
       </Routes>
     </>

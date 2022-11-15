@@ -1,15 +1,20 @@
+
 const UserInfo = ({ data }) => {
   return (
     <>
       <section className="user-info">
-        <div>
+        <div className="avatar-container">
           <img
             className="user-icon"
             src="../assets/images/beerbook_logo.svg"
             alt="logo"
           />
+        </div>
+        <div className="user-info-container">
           <h2>{data?.name}</h2>
-          <p>{data?.email}</p>
+          {/* <p>{data?.email}</p> */}
+          <button className="log-out">Log Out</button>
+
         </div>
       </section>
     </>
