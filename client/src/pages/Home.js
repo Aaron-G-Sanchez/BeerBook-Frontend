@@ -24,52 +24,50 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
     // console.log(beer)
     setBeer(beer)
 
-  const userId = async () => {
-    let id = user.id
-    console.log(user.id)
-    const response = await getUser(`${id}`)
-    setData(response.data)
+    const userId = async () => {
+      let id = user.id
+      console.log(user.id)
+      const response = await getUser(`${id}`)
+      setData(response.data)
+    }
 
-  }
+    useEffect(() => {
+      getListFeed()
+      getBeer()
+      userId()
+    }, [])
 
-  useEffect(() => {
-    getListFeed()
-    getBeer()
-    userId()
-  }, [])
+    const handleChange = (e) => {
+      setFormValue(e.target.value)
+    }
 
+    return (
+      <>
+        <main className="user-dash">
+          <ListFeed feed={feed} />
 
-  const handleChange = (e) => {
-    setFormValue(e.target.value)
-  }
-
-  return (
-    <>
-      <main className="user-dash">
-        <ListFeed feed={feed} />
-
-        {toggle ? (
-          <CreateNewList
-            toggle={toggle}
-            setToggle={setToggle}
-            formValue={formValue}
-            setFormValue={setFormValue}
-            handleChange={handleChange}
+          {toggle ? (
+            <CreateNewList
+              toggle={toggle}
+              setToggle={setToggle}
+              formValue={formValue}
+              setFormValue={setFormValue}
+              handleChange={handleChange}
+            />
+          ) : (
+            <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
+          )}
+          <SelectedBeer
+            beer={beer}
+            selectedBeer={selectedBeer}
+            setSelectedBeer={setSelectedBeer}
           />
-        ) : (
-          <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
-        )}
-        <SelectedBeer
-          beer={beer}
-          selectedBeer={selectedBeer}
-          setSelectedBeer={setSelectedBeer}
-        />
-        <UserMadeList data={data} toggle={toggle} setToggle={setToggle} />
-        <UserInfo data={data} user={user} />
-
-      </main>
-    </>
-  )
+          <UserMadeList data={data} toggle={toggle} setToggle={setToggle} />
+          <UserInfo data={data} user={user} />
+        </main>
+      </>
+    )
+  }
 }
 
 export default Home
