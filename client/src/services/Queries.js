@@ -10,7 +10,7 @@ export const getFeed = async () => {
 
 export const getUser = async (id) => {
   try {
-    const response = await Client.get(`/user/${id}/lists`)
+    const response = await Client.get(`/user/${id}`)
     return response
   } catch (error) {
     throw error

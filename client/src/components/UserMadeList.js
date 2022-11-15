@@ -1,4 +1,5 @@
-const UserMadeList = () => {
+const UserMadeList = ({ data }) => {
+  console.log(data)
   return (
     <>
       <section className="users-list">

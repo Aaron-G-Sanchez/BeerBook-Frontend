@@ -23,7 +23,7 @@ const Home = ({ user, setFeed, feed }) => {
   useEffect(() => {
     getListFeed()
     userId()
-  }, [])
+  }, [user])
 
   return (
     <>

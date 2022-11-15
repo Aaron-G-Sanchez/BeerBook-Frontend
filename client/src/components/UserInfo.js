@@ -1,5 +1,4 @@
-const UserInfo = ({ user, data }) => {
-  console.log(data)
+const UserInfo = ({ data }) => {
   return (
     <>
       <section className="user-info">
