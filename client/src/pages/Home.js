@@ -42,6 +42,7 @@ const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
     userId()
   }, [user])
 
+  console.log(formValue)
   // const handleChange = (e) => {
   //   setFormValue({ ...formValue, [e.target.name]: e.target.value })
   // }
@@ -56,6 +57,7 @@ const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
         )}
         {toggle ? (
           <CreateNewList
+            user={user}
             toggle={toggle}
             setToggle={setToggle}
             formValue={formValue}

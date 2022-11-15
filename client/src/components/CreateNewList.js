@@ -1,6 +1,7 @@
 import { createBeerList } from '../services/Queries'
 
 const CreateNewList = ({
+  user,
   toggle,
   setToggle,
   formValue,
@@ -10,8 +11,7 @@ const CreateNewList = ({
   const handleSubmit = async (e) => {
     e.preventDefault()
     setToggle(!toggle)
-    await createBeerList({ name: formValue.name })
-    setFormValue(initialState)
+    await createBeerList({ name: formValue.name, userId: user.id })
   }
 
   const handleChange = (e) => {

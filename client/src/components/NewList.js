@@ -1,6 +1,10 @@
+// import { useNavigate } from 'react-router-dom'
+
 const NewList = ({ formValue, setFormValue }) => {
+  // let navigate = useNavigate()
   const handleClick = () => {
     setFormValue('')
+    window.location.reload()
   }
   return (
     <>
