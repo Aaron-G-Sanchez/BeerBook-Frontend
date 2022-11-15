@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
 import Beers from '../components/Beers'
+import { useState, useEffect } from 'react'
 import ListFeed from '../components/ListFeed'
 import UserInfo from '../components/UserInfo'
 import UserMadeList from '../components/UserMadeList'

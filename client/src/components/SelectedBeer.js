@@ -4,7 +4,7 @@ const SelectedBeer = ({ selectedBeer }) => {
       <section>
         {selectedBeer ? (
           <div>
-            <h2>{selectedBeer.name}</h2>
+            <h2 className="display-name">{selectedBeer.name}</h2>
             <h3>{selectedBeer.brewery}</h3>
             <img className="beer-image" src={selectedBeer.image} />
             <p>

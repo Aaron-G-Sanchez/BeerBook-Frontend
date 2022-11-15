@@ -19,7 +19,7 @@ const CreateNewList = ({
   return (
     <>
       <section className="new-list">
-        <h1>Create New List</h1>
+        <h1>Create A New List</h1>
 
         <form className="new-list-form" onSubmit={handleSubmit}>
           <input

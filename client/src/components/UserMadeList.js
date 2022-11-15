@@ -8,9 +8,11 @@ const UserMadeList = ({ toggle, setToggle }) => {
     <>
       <section className="users-list">
         <h2>My Lists</h2>
-        <button className="add-list-button" onClick={handleClick}>
-          +
-        </button>
+        <div>
+          <button className="add-list-button" onClick={handleClick}>
+            +
+          </button>
+        </div>
       </section>
     </>
   )
