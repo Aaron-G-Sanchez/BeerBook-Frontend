@@ -6,12 +6,17 @@ import UserMadeList from '../components/UserMadeList'
 import { getFeed, getUser, getAllBeers } from '../services/Queries'
 import SelectedBeer from '../components/SelectedBeer'
 import CreateNewList from '../components/CreateNewList'
+import NewList from '../components/NewList'
 
-const Home = ({ user, feed, setFeed, setBeer, beer }) => {
+const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
+  const initialState = {
+    name: ''
+  }
+
   const [selectedBeer, setSelectedBeer] = useState(null)
   const [toggle, setToggle] = useState(false)
-  const [formValue, setFormValue] = useState('')
-  const [data, setData] = useState()
+  const [formValue, setFormValue] = useState(initialState)
+  // const [data, setData] = useState()
 
   const getListFeed = async () => {
     const feed = await getFeed()
@@ -24,34 +29,41 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
     setBeer(beer)
   }
   const userId = async () => {
-    let id = user.id
-    console.log(user.id)
-    const response = await getUser(`${id}`)
-    setData(response.data)
+    if (user) {
+      let id = user.id
+      const response = await getUser(`${id}`)
+      setData(response.data)
+    }
   }
 
   useEffect(() => {
     getListFeed()
     getBeer()
     userId()
-  }, [])
+  }, [user])
 
-  const handleChange = (e) => {
-    setFormValue(e.target.value)
-  }
+  console.log(formValue)
+  // const handleChange = (e) => {
+  //   setFormValue({ ...formValue, [e.target.name]: e.target.value })
+  // }
 
   return (
     <>
       <main className="user-dash">
-        <ListFeed feed={feed} />
-
+        {formValue.name ? (
+          <NewList formValue={formValue} setFormValue={setFormValue} />
+        ) : (
+          <ListFeed feed={feed} />
+        )}
         {toggle ? (
           <CreateNewList
+            user={user}
             toggle={toggle}
             setToggle={setToggle}
             formValue={formValue}
             setFormValue={setFormValue}
-            handleChange={handleChange}
+            initialState={initialState}
+            // handleChange={handleChange}
           />
         ) : (
           <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
