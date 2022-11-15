@@ -11,10 +11,11 @@ function App() {
   const [user, setUser] = useState(null)
   const [feed, setFeed] = useState(null)
   const [beer, setBeer] = useState(null)
+  const [data, setData] = useState(null)
 
   const checkToken = async () => {
     const user = await CheckSession()
-    // setUser(user)
+    setUser(user)
   }
 
   useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
     if (token) {
       checkToken()
     }
-  })
+  }, [])
 
   return (
     <>
@@ -38,6 +39,8 @@ function App() {
               setFeed={setFeed}
               beer={beer}
               setBeer={setBeer}
+              data={data}
+              setData={setData}
             />
           }
         />

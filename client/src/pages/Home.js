@@ -6,12 +6,13 @@ import UserMadeList from '../components/UserMadeList'
 import { getFeed, getUser, getAllBeers } from '../services/Queries'
 import SelectedBeer from '../components/SelectedBeer'
 import CreateNewList from '../components/CreateNewList'
+import NewList from '../components/NewList'
 
-const Home = ({ user, feed, setFeed, setBeer, beer }) => {
+const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
   const [selectedBeer, setSelectedBeer] = useState(null)
   const [toggle, setToggle] = useState(false)
   const [formValue, setFormValue] = useState('')
-  const [data, setData] = useState()
+  // const [data, setData] = useState()
 
   const getListFeed = async () => {
     const feed = await getFeed()
@@ -24,17 +25,18 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
     setBeer(beer)
   }
   const userId = async () => {
-    let id = user.id
-    console.log(user.id)
-    const response = await getUser(`${id}`)
-    setData(response.data)
+    if (user) {
+      let id = user.id
+      const response = await getUser(`${id}`)
+      setData(response.data)
+    }
   }
 
   useEffect(() => {
     getListFeed()
     getBeer()
     userId()
-  }, [])
+  }, [user])
 
   const handleChange = (e) => {
     setFormValue(e.target.value)
@@ -43,8 +45,11 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
   return (
     <>
       <main className="user-dash">
-        <ListFeed feed={feed} />
-
+        {formValue ? (
+          <NewList formValue={formValue} setFormValue={setFormValue} />
+        ) : (
+          <ListFeed feed={feed} />
+        )}
         {toggle ? (
           <CreateNewList
             toggle={toggle}

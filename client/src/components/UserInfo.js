@@ -1,4 +1,3 @@
-
 const UserInfo = ({ data }) => {
   return (
     <>
@@ -11,10 +10,9 @@ const UserInfo = ({ data }) => {
           />
         </div>
         <div className="user-info-container">
-          <h2>{data?.name}</h2>
+          <h2>{data ? data.name : null}</h2>
           {/* <p>{data?.email}</p> */}
           <button className="log-out">Log Out</button>
-
         </div>
       </section>
     </>

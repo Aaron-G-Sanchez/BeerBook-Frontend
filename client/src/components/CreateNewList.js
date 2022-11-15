@@ -8,14 +8,9 @@ const CreateNewList = ({
   const handleSubmit = (e) => {
     e.preventDefault()
     setToggle(!toggle)
-    setFormValue('')
+    // setFormValue('')
   }
 
-  // const handleChange = (e) => {
-  //   setFormValue(e.target.value)
-  //   console.log(formValue)
-  // }
-  // STOPED HERE ^ TRYING TO GET STATE TO NOT BE DELAYED.
   return (
     <>
       <section className="new-list">

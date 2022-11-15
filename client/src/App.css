@@ -206,6 +206,10 @@ align-items: center;
 overflow: auto;
 }
 
+.new-user-list{
+  grid-row: 1/4;
+}
+
 .beer-list {
   grid-row: 1/4;
   display: flex;
@@ -240,6 +244,21 @@ overflow: auto;
 }
 
 
+/* NEW USER LIST */
+
+.save-list{
+  background-color: #ffd100;
+  width: 20%;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  transition: .3s;
+}
+
+.save-list:hover{
+  scale: 1.1;
+}
+
 /* ALL BEERS DISPLAY */
 
 .beer-wrapper {
@@ -265,7 +284,10 @@ overflow: auto;
   background-image: url('../public/assets/images/beerwaveTwo.svg');
   background-size: cover;
   overflow: auto;
+}
 
+.single-beer::-webkit-scrollbar {
+  display: none;
 }
 
 .single-beer:hover {
