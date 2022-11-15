@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 import ListFeed from '../components/ListFeed'
 import UserInfo from '../components/UserInfo'
 import UserMadeList from '../components/UserMadeList'
-import { getFeed, getUser } from '../services/Queries'
+import { getFeed, getUser, getAllBeers } from '../services/Queries'
 import SelectedBeer from '../components/SelectedBeer'
-import { getAllBeers, getFeed } from '../services/Queries'
+
 import CreateNewList from '../components/CreateNewList'
 
 const Home = ({ user, feed, setFeed, setBeer, beer }) => {
