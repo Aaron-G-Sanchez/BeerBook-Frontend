@@ -7,3 +7,12 @@ export const getFeed = async () => {
     return response
   } catch (error) {}
 }
+
+export const getUser = async (id) => {
+  try {
+    const response = await Client.get(`/user/${id}/lists`)
+    return response
+  } catch (error) {
+    throw error
+  }
+}

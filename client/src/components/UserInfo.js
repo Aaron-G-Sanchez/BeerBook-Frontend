@@ -1,5 +1,5 @@
-const UserInfo = ({ user }) => {
-  console.log(user.data)
+const UserInfo = ({ user, data }) => {
+  console.log(data)
   return (
     <>
       <section className="user-info">
@@ -9,8 +9,8 @@ const UserInfo = ({ user }) => {
             src="../assets/images/beerbook_logo.svg"
             alt="logo"
           />
-          <h2>{user.data.name}</h2>
-          <p>{user.data.email}</p>
+          <h2>{data?.name}</h2>
+          <p>{data?.email}</p>
         </div>
       </section>
     </>
