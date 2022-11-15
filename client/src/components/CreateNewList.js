@@ -1,10 +1,4 @@
-const CreateNewList = ({
-  toggle,
-  setToggle,
-  formValue,
-  setFormValue,
-  handleChange
-}) => {
+const CreateNewList = ({ toggle, setToggle, formValue, handleChange }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setToggle(!toggle)
@@ -20,8 +14,9 @@ const CreateNewList = ({
           <input
             className="new-list-input"
             type="text"
+            name="name"
             placeholder="New List Name"
-            value={formValue}
+            value={formValue.name}
             onChange={handleChange}
           />
           <button className="new-list-submit" type="submit">

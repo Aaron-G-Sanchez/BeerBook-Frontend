@@ -9,9 +9,13 @@ import CreateNewList from '../components/CreateNewList'
 import NewList from '../components/NewList'
 
 const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
+  const initialState = {
+    name: ''
+  }
+
   const [selectedBeer, setSelectedBeer] = useState(null)
   const [toggle, setToggle] = useState(false)
-  const [formValue, setFormValue] = useState('')
+  const [formValue, setFormValue] = useState(initialState)
   // const [data, setData] = useState()
 
   const getListFeed = async () => {
@@ -39,13 +43,13 @@ const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
   }, [user])
 
   const handleChange = (e) => {
-    setFormValue(e.target.value)
+    setFormValue({ ...formValue, [e.target.name]: e.target.value })
   }
 
   return (
     <>
       <main className="user-dash">
-        {formValue ? (
+        {formValue.name ? (
           <NewList formValue={formValue} setFormValue={setFormValue} />
         ) : (
           <ListFeed feed={feed} />

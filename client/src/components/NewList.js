@@ -5,7 +5,7 @@ const NewList = ({ formValue, setFormValue }) => {
   return (
     <>
       <section className="new-user-list">
-        <h2>{formValue}</h2>
+        <h2>{formValue.name}</h2>
         <button className="save-list" onClick={handleClick}>
           Save!
         </button>
