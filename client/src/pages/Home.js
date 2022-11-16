@@ -35,7 +35,6 @@ const Home = ({
 
   const getBeer = async () => {
     const beer = await getAllBeers()
-    // console.log(beer)
     setBeer(beer)
   }
   const userId = async () => {
