@@ -1,4 +1,6 @@
-![title](client/public/assets/images/beerbook_logo.svg)
+<p align="center">
+  <img src="client/public/assets/images/beerbook_logo.svg" alt="title_logo"/>
+</p>
 
 # <p style="text-align: center;"> Welcome To BeerBook <p>
 
