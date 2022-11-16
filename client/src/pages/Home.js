@@ -26,6 +26,7 @@ const Home = ({
   const [selectedBeer, setSelectedBeer] = useState(null)
   const [toggle, setToggle] = useState(false)
   const [formValue, setFormValue] = useState(initialState)
+  const [beerListId, setBeerListId] = useState(null)
   // const [data, setData] = useState()
 
   const getListFeed = async () => {
@@ -35,7 +36,6 @@ const Home = ({
 
   const getBeer = async () => {
     const beer = await getAllBeers()
-    // console.log(beer)
     setBeer(beer)
   }
   const userId = async () => {
@@ -52,15 +52,15 @@ const Home = ({
     userId()
   }, [user])
 
-  // const handleChange = (e) => {
-  //   setFormValue({ ...formValue, [e.target.name]: e.target.value })
-  // }
-
   return user ? (
     <>
       <main className="user-dash">
         {formValue.name ? (
-          <NewList formValue={formValue} setFormValue={setFormValue} />
+          <NewList
+            formValue={formValue}
+            setFormValue={setFormValue}
+            beerList={beerListId}
+          />
         ) : (
           <ListFeed feed={feed} />
         )}
@@ -72,6 +72,8 @@ const Home = ({
             formValue={formValue}
             setFormValue={setFormValue}
             initialState={initialState}
+            beerList={beerListId}
+            setBeerList={setBeerListId}
             // handleChange={handleChange}
           />
         ) : (
@@ -81,6 +83,8 @@ const Home = ({
           beer={beer}
           selectedBeer={selectedBeer}
           setSelectedBeer={setSelectedBeer}
+          beerListId={beerListId}
+          setBeerList={setBeerListId}
         />
         <UserMadeList data={data} toggle={toggle} setToggle={setToggle} />
         <UserInfo data={data} user={user} handleLogOut={handleLogOut} />

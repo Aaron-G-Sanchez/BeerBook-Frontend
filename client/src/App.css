@@ -236,6 +236,10 @@ overflow: auto;
 
 /* USER CREATED BEER LIST FEED */
 
+/* .list-wrapper::-webkit-scrollbar {
+  display: none;
+} */
+
 .list {
   width: 80%;
   margin: 5%;

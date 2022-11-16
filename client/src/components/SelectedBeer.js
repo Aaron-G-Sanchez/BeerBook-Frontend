@@ -1,4 +1,13 @@
-const SelectedBeer = ({ selectedBeer }) => {
+import { addBeerToList } from '../services/Queries'
+
+const SelectedBeer = ({ selectedBeer, beerListId, setBeerListId }) => {
+  const handleClick = async () => {
+    const response = await addBeerToList(beerListId.id, {
+      beerId: selectedBeer.id
+    })
+  }
+  console.log(selectedBeer)
+
   return (
     <>
       <section>
@@ -10,7 +19,12 @@ const SelectedBeer = ({ selectedBeer }) => {
             <p>
               ABV: <span>{selectedBeer.abv}</span>
             </p>
-            <button className="add-to-list">Add to list!</button>
+            <p>{selectedBeer.style}</p>
+            {beerListId ? (
+              <button className="add-to-list" onClick={handleClick}>
+                Add to list!
+              </button>
+            ) : null}
           </div>
         ) : (
           <div className="beer-guide">

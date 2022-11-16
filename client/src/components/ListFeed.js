@@ -1,5 +1,4 @@
 const ListFeed = ({ feed }) => {
-  console.log(feed)
   return (
     <>
       <section className="list-feed">

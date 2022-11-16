@@ -38,3 +38,12 @@ export const createBeerList = async (data) => {
     throw error
   }
 }
+
+export const addBeerToList = async (id, data) => {
+  try {
+    const response = await Client.put(`/beerlist/${id}`, data)
+    return response
+  } catch (error) {
+    throw error
+  }
+}
