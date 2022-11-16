@@ -130,7 +130,7 @@ height: 30%;
   border: none;
 }
 
-.submit:hover {
+.submit:hover:enabled {
   background-color: #d6d6d6;
   scale: 1.1;
 }
@@ -179,7 +179,7 @@ height: 7%;
   transition: .3s;
 }
 
-.register-submit:hover {
+.register-submit:hover:enabled {
   background-color: #d6d6d6;
   scale: 1.1;
 }
@@ -428,4 +428,21 @@ font-size: 150%;
 .add-list-button:hover {
   background-color: #ffd100;
   scale: 1.1;
+}
+
+
+/* UNATHORIZED USER DISPLAY */
+
+.protected-button {
+  width: 10%;
+  height: 30px;
+  background-color: #ffd100;
+  border-radius: 15px;
+  transition: .3s;
+  border: none;
+}
+
+.protected-button:hover {
+  background-color: #d6d6d6;
+  border: none;
 }
