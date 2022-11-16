@@ -16,7 +16,15 @@ const SelectedList = ({ beerList, beerListId }) => {
             ? beerList.data.beers.map((beer) => <p>{beer.name}</p>)
             : null}
 
-          <button onClick={handleClick}>Delete List</button>
+          <button
+            onClick={() => {
+              if (window.confirm('Are you sure you want to delete?')) {
+                handleClick()
+              }
+            }}
+          >
+            Delete List
+          </button>
         </div>
       </section>
     </>
