@@ -1,7 +1,4 @@
-// import { useNavigate } from 'react-router-dom'
-
-const NewList = ({ formValue, setFormValue, beerListId }) => {
-  // let navigate = useNavigate()
+const NewList = ({ formValue, setFormValue, beerList }) => {
   const handleClick = () => {
     setFormValue('')
     window.location.reload()
@@ -10,11 +7,15 @@ const NewList = ({ formValue, setFormValue, beerListId }) => {
     <>
       <section className="new-user-list">
         <h2>{formValue.name}</h2>
-        {/* {beerList.data.beers ? (
-          <div>
-            <p>{beerList.data.beers.name}</p>
-          </div>
-        ) : null} */}
+        {beerList ? (
+          beerList.data.beers.map((beer) => (
+            <div key={beer.id}>
+              <p>{beer.name}</p>
+            </div>
+          ))
+        ) : (
+          <div>no beer yet</div>
+        )}
         <button className="save-list" onClick={handleClick}>
           Save!
         </button>

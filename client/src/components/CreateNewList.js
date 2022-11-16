@@ -6,8 +6,8 @@ const CreateNewList = ({
   setToggle,
   formValue,
   setFormValue,
-  beerList,
-  setBeerList,
+  beerListId,
+  setBeerListId,
   initialState
 }) => {
   const handleSubmit = async (e) => {
@@ -17,7 +17,7 @@ const CreateNewList = ({
       name: formValue.name,
       userId: user.id
     })
-    setBeerList(response.data)
+    setBeerListId(response.data)
   }
 
   const handleChange = (e) => {

@@ -1,12 +1,13 @@
 import { addBeerToList } from '../services/Queries'
 
-const SelectedBeer = ({ selectedBeer, beerListId, setBeerListId }) => {
+const SelectedBeer = ({ selectedBeer, beerListId, setBeerList }) => {
   const handleClick = async () => {
     const response = await addBeerToList(beerListId.id, {
       beerId: selectedBeer.id
     })
+    setBeerList(response)
   }
-
+  console.log(beerListId)
   return (
     <>
       <section>
