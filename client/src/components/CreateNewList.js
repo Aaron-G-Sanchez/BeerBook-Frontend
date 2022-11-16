@@ -6,9 +6,7 @@ const CreateNewList = ({
   setToggle,
   formValue,
   setFormValue,
-  beerListId,
-  setBeerListId,
-  initialState
+  setBeerListId
 }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()

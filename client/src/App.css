@@ -206,6 +206,10 @@ overflow: auto;
   grid-row: 1/4;
 }
 
+.selected-list {
+  grid-row: 1/4
+}
+
 .beer-list {
   grid-row: 1/4;
   display: flex;

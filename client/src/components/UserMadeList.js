@@ -1,6 +1,23 @@
-const UserMadeList = ({ data, toggle, setToggle }) => {
-  const handleClick = (e) => {
+import { getBeerListById } from '../services/Queries'
+
+const UserMadeList = ({
+  data,
+  toggle,
+  setToggle,
+  setBeerListId,
+  setBeerList,
+  setFormValue
+}) => {
+  const handleClick = () => {
     setToggle(!toggle)
+  }
+
+  const selectList = async (list) => {
+    setFormValue('')
+    setToggle(false)
+    setBeerListId(list)
+    const response = await getBeerListById(list.id)
+    setBeerList(response)
   }
   return (
     <>
@@ -9,7 +26,11 @@ const UserMadeList = ({ data, toggle, setToggle }) => {
         <div className="list-wrapper">
           {data
             ? data.BeerLists.map((list) => (
-                <div key={list.id} className="users-list">
+                <div
+                  key={list.id}
+                  className="users-list"
+                  onClick={() => selectList(list)}
+                >
                   {list.name}{' '}
                 </div>
               ))

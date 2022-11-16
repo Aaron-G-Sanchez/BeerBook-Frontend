@@ -47,3 +47,12 @@ export const addBeerToList = async (id, data) => {
     throw error
   }
 }
+
+export const getBeerListById = async (id) => {
+  try {
+    const response = await Client.get(`/beerlist/${id}`)
+    return response
+  } catch (error) {
+    throw error
+  }
+}

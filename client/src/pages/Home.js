@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import SelectedBeer from '../components/SelectedBeer'
 import CreateNewList from '../components/CreateNewList'
 import NewList from '../components/NewList'
+import SelectedList from '../components/SelectedList'
 
 const Home = ({
   user,
@@ -34,6 +35,7 @@ const Home = ({
     const feed = await getFeed()
     setFeed(feed)
   }
+  console.log(feed)
 
   const getBeer = async () => {
     const beer = await getAllBeers()
@@ -57,7 +59,7 @@ const Home = ({
   return user ? (
     <>
       <main className="user-dash">
-        {formValue.name ? (
+        {/* /{formValue.name ? (
           <NewList
             formValue={formValue}
             setFormValue={setFormValue}
@@ -65,7 +67,23 @@ const Home = ({
           />
         ) : (
           <ListFeed feed={feed} />
-        )}
+        )}  */}
+        {(() => {
+          if (formValue.name) {
+            return (
+              <NewList
+                formValue={formValue}
+                setFormValue={setFormValue}
+                beerList={beerList}
+              />
+            )
+          } else if (beerListId) {
+            return <SelectedList beerList={beerList} />
+          } else {
+            return <ListFeed feed={feed} />
+          }
+        })()}
+
         {toggle ? (
           <CreateNewList
             user={user}
@@ -73,10 +91,7 @@ const Home = ({
             setToggle={setToggle}
             formValue={formValue}
             setFormValue={setFormValue}
-            initialState={initialState}
-            beerListId={beerListId}
             setBeerListId={setBeerListId}
-            // handleChange={handleChange}
           />
         ) : (
           <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
@@ -86,10 +101,16 @@ const Home = ({
           selectedBeer={selectedBeer}
           setSelectedBeer={setSelectedBeer}
           beerListId={beerListId}
-          // setBeerListId={setBeerListId}
           setBeerList={setBeerList}
         />
-        <UserMadeList data={data} toggle={toggle} setToggle={setToggle} />
+        <UserMadeList
+          data={data}
+          toggle={toggle}
+          setToggle={setToggle}
+          setBeerListId={setBeerListId}
+          setBeerList={setBeerList}
+          setFormValue={setFormValue}
+        />
         <UserInfo data={data} user={user} handleLogOut={handleLogOut} />
       </main>
     </>
