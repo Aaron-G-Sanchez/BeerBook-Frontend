@@ -22,7 +22,7 @@ export const getAllBeers = async () => {
 
 export const getUser = async (id) => {
   try {
-    const response = await Client.get(`/user/${id}`)
+    const response = await Client.get(`/user/${id}/lists`)
     return response
   } catch (error) {
     throw error

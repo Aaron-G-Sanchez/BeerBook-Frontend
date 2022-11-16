@@ -25,6 +25,11 @@ function App() {
     }
   }, [])
 
+  const handleLogOut = () => {
+    setUser(null)
+    localStorage.clear()
+  }
+
   return (
     <>
       <Routes>
@@ -41,6 +46,7 @@ function App() {
               setBeer={setBeer}
               data={data}
               setData={setData}
+              handleLogOut={handleLogOut}
             />
           }
         />

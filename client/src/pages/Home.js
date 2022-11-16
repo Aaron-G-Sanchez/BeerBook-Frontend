@@ -8,7 +8,16 @@ import SelectedBeer from '../components/SelectedBeer'
 import CreateNewList from '../components/CreateNewList'
 import NewList from '../components/NewList'
 
-const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
+const Home = ({
+  user,
+  feed,
+  setFeed,
+  setBeer,
+  beer,
+  data,
+  setData,
+  handleLogOut
+}) => {
   const initialState = {
     name: ''
   }
@@ -73,7 +82,7 @@ const Home = ({ user, feed, setFeed, setBeer, beer, data, setData }) => {
           setSelectedBeer={setSelectedBeer}
         />
         <UserMadeList data={data} toggle={toggle} setToggle={setToggle} />
-        <UserInfo data={data} user={user} />
+        <UserInfo data={data} user={user} handleLogOut={handleLogOut} />
       </main>
     </>
   )
