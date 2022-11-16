@@ -78,7 +78,7 @@ const Home = ({
               />
             )
           } else if (beerListId) {
-            return <SelectedList beerList={beerList} />
+            return <SelectedList beerList={beerList} beerListId={beerListId} />
           } else {
             return <ListFeed feed={feed} />
           }

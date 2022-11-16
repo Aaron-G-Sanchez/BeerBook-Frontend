@@ -1,4 +1,11 @@
-const SelectedList = ({ beerList }) => {
+import { destroyList } from '../services/Queries'
+
+const SelectedList = ({ beerList, beerListId }) => {
+  const handleClick = async () => {
+    const deleteList = await destroyList(beerListId.id)
+    window.location.reload()
+  }
+
   return (
     <>
       <section className="selected-list">
@@ -9,7 +16,7 @@ const SelectedList = ({ beerList }) => {
             ? beerList.data.beers.map((beer) => <p>{beer.name}</p>)
             : null}
 
-          <button>Delete List</button>
+          <button onClick={handleClick}>Delete List</button>
         </div>
       </section>
     </>
