@@ -18,7 +18,7 @@ const SelectedBeer = ({ selectedBeer, beerListId, setBeerListId }) => {
             <p>
               ABV: <span>{selectedBeer.abv}</span>
             </p>
-            <p>{selectedBeer.style}</p>
+            <p>Style: {selectedBeer.style}</p>
             {beerListId ? (
               <button className="add-to-list" onClick={handleClick}>
                 Add to list!
