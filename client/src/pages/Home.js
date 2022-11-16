@@ -4,6 +4,7 @@ import ListFeed from '../components/ListFeed'
 import UserInfo from '../components/UserInfo'
 import UserMadeList from '../components/UserMadeList'
 import { getFeed, getUser, getAllBeers } from '../services/Queries'
+import { useNavigate } from 'react-router-dom'
 import SelectedBeer from '../components/SelectedBeer'
 import CreateNewList from '../components/CreateNewList'
 import NewList from '../components/NewList'
@@ -21,7 +22,7 @@ const Home = ({
   const initialState = {
     name: ''
   }
-
+  const navigate = useNavigate()
   const [selectedBeer, setSelectedBeer] = useState(null)
   const [toggle, setToggle] = useState(false)
   const [formValue, setFormValue] = useState(initialState)
@@ -55,7 +56,7 @@ const Home = ({
   //   setFormValue({ ...formValue, [e.target.name]: e.target.value })
   // }
 
-  return (
+  return user ? (
     <>
       <main className="user-dash">
         {formValue.name ? (
@@ -85,6 +86,11 @@ const Home = ({
         <UserInfo data={data} user={user} handleLogOut={handleLogOut} />
       </main>
     </>
+  ) : (
+    <div className="protected">
+      <h3>Oops! You must be signed in to do that!</h3>
+      <button onClick={() => navigate('/')}>Sign In</button>
+    </div>
   )
 }
 
