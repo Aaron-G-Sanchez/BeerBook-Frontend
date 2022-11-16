@@ -6,12 +6,16 @@ const CreateNewList = ({
   setToggle,
   formValue,
   setFormValue,
-  initialState
+  setBeerListId
 }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setToggle(!toggle)
-    await createBeerList({ name: formValue.name, userId: user.id })
+    let response = await createBeerList({
+      name: formValue.name,
+      userId: user.id
+    })
+    setBeerListId(response.data)
   }
 
   const handleChange = (e) => {
