@@ -6,7 +6,6 @@ const SelectedBeer = ({ selectedBeer, beerListId, setBeerListId }) => {
       beerId: selectedBeer.id
     })
   }
-  console.log(selectedBeer)
 
   return (
     <>
