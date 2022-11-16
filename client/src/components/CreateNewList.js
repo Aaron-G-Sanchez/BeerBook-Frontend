@@ -1,21 +1,23 @@
+import { createBeerList } from '../services/Queries'
+
 const CreateNewList = ({
+  user,
   toggle,
   setToggle,
   formValue,
   setFormValue,
-  handleChange
+  initialState
 }) => {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setToggle(!toggle)
-    setFormValue('')
+    await createBeerList({ name: formValue.name, userId: user.id })
   }
 
-  // const handleChange = (e) => {
-  //   setFormValue(e.target.value)
-  //   console.log(formValue)
-  // }
-  // STOPED HERE ^ TRYING TO GET STATE TO NOT BE DELAYED.
+  const handleChange = (e) => {
+    setFormValue({ ...formValue, [e.target.name]: e.target.value })
+  }
+
   return (
     <>
       <section className="new-list">
@@ -25,8 +27,9 @@ const CreateNewList = ({
           <input
             className="new-list-input"
             type="text"
+            name="name"
             placeholder="New List Name"
-            value={formValue}
+            value={formValue.name}
             onChange={handleChange}
           />
           <button className="new-list-submit" type="submit">

@@ -11,6 +11,7 @@ function App() {
   const [user, setUser] = useState(null)
   const [feed, setFeed] = useState(null)
   const [beer, setBeer] = useState(null)
+  const [data, setData] = useState(null)
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -23,6 +24,11 @@ function App() {
       checkToken()
     }
   }, [])
+
+  const handleLogOut = () => {
+    setUser(null)
+    localStorage.clear()
+  }
 
   return (
     <>
@@ -38,6 +44,9 @@ function App() {
               setFeed={setFeed}
               beer={beer}
               setBeer={setBeer}
+              data={data}
+              setData={setData}
+              handleLogOut={handleLogOut}
             />
           }
         />
