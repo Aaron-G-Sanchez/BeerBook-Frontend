@@ -1,15 +1,38 @@
-const UserMadeList = ({ data, toggle, setToggle }) => {
-  const handleClick = (e) => {
+import { getBeerListById } from '../services/Queries'
+
+const UserMadeList = ({
+  data,
+  toggle,
+  setToggle,
+  setBeerListId,
+  setBeerList,
+  setFormValue
+}) => {
+  const handleClick = () => {
     setToggle(!toggle)
+  }
+
+  const selectList = async (list) => {
+    setFormValue('')
+    setToggle(false)
+    setBeerListId(list)
+    const response = await getBeerListById(list.id)
+    setBeerList(response)
   }
   return (
     <>
-      <section className="users-list">
+      <section className="user-made-lists">
         <h2>My Lists</h2>
-        <div>
+        <div className="list-wrapper">
           {data
             ? data.BeerLists.map((list) => (
-                <div key={list.id}>{list.name} </div>
+                <div
+                  key={list.id}
+                  className="users-list"
+                  onClick={() => selectList(list)}
+                >
+                  {list.name}{' '}
+                </div>
               ))
             : null}
           <button className="add-list-button" onClick={handleClick}>
