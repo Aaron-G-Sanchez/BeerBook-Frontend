@@ -2,9 +2,9 @@
   <img src="client/public/assets/images/beerbook_logo.svg" alt="title_logo"/>
 </p>
 
-# <p style="text-align: center;"> Welcome To BeerBook <p>
+# <p align="center"> Welcome To BeerBook <p>
 
-### <p style="text-align: center;"> Your one stop shop for saving your favorite beers, and tracking beers you want to try. <p>
+### <p align="center"> Your one stop shop for saving your favorite beers, and tracking beers you want to try. <p>
 
 #
 
@@ -26,7 +26,7 @@
 
 ---
 
-### <p style="text-align: center;">**_Technologies Used_**<p>
+### <p align="center">**_Technologies Used_**<p>
 
 ![Logos](client/public/assets/images/BeerBook_Logos_for_README.png)
 
