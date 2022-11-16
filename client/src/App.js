@@ -14,7 +14,7 @@ function App() {
 
   const checkToken = async () => {
     const user = await CheckSession()
-    // setUser(user)
+    setUser(user)
   }
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function App() {
     if (token) {
       checkToken()
     }
-  })
+  }, [])
 
   return (
     <>

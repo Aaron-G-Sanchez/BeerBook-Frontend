@@ -20,21 +20,21 @@ const Home = ({ user, feed, setFeed, setBeer, beer }) => {
 
   const getBeer = async () => {
     const beer = await getAllBeers()
-    // console.log(beer)
     setBeer(beer)
   }
   const userId = async () => {
-    let id = user.id
-    console.log(user.id)
-    const response = await getUser(`${id}`)
-    setData(response.data)
+    if (user) {
+      let id = user.id
+      const response = await getUser(`${id}`)
+      setData(response.data)
+    }
   }
 
   useEffect(() => {
     getListFeed()
     getBeer()
     userId()
-  }, [])
+  }, [user])
 
   const handleChange = (e) => {
     setFormValue(e.target.value)
