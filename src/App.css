@@ -191,7 +191,7 @@ height: 7%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 2fr 2fr 1fr;
-  gap: 30px;
+  gap: 30px
 } 
 
 .list-feed {

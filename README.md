@@ -1,18 +1,20 @@
-![title](client/public/assets/images/beerbook_logo.svg)
+<p align="center">
+  <img src="client/public/assets/images/beerbook_logo.svg" alt="title_logo"/>
+</p>
 
-# <p style="text-align: center;"> Welcome To BeerBook <p>
+# <p align="center"> Welcome To BeerBook <p>
 
-### <p style="text-align: center;"> Your one stop shop for saving your favorite beers, and tracking beers you want to try. <p>
+### <p align="center"> Your one stop shop for saving your favorite beers, and tracking beers you want to try. <p>
 
 #
 
 ### Date: 11/18/2022
 
-#### By: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Derek Lewis | [LinkedIn](http://www.linkedin.com/in/derek-r-lewis) | [GitHub](https://github.com/d-lewis9442)
+#### By: &nbsp;Derek Lewis | [LinkedIn](http://www.linkedin.com/in/derek-r-lewis) | [GitHub](https://github.com/d-lewis9442)
 
-#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Max Calabro | [LinkedIn](https://www.linkedin.com/in/max-calabro) | [GitHub](https://github.com/max-calabro)
+#### &nbsp; &nbsp; &nbsp; &nbsp;Max Calabro | [LinkedIn](https://www.linkedin.com/in/max-calabro) | [GitHub](https://github.com/max-calabro)
 
-#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Aaron Sanchez | [LinkedIn](https://www.linkedin.com/in/aaron-g-sanchez) | [GitHub](https://github.com/Aaron-G-Sanchez)
+#### &nbsp;&nbsp;&nbsp;Aaron Sanchez | [LinkedIn](https://www.linkedin.com/in/aaron-g-sanchez) | [GitHub](https://github.com/Aaron-G-Sanchez)
 
 &nbsp;
 
@@ -24,7 +26,7 @@
 
 ---
 
-### <p style="text-align: center;">**_Technologies Used_**<p>
+### <p align="center">**_Technologies Used_**<p>
 
 ![Logos](client/public/assets/images/BeerBook_Logos_for_README.png)
 
