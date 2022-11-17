@@ -5,7 +5,7 @@ const SelectedBeer = ({ selectedBeer, beerListId, setBeerList, user }) => {
     const response = await addBeerToList(beerListId.id, {
       beerId: selectedBeer.id
     })
-    // console.log(response)
+
     setBeerList(response)
   }
 

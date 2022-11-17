@@ -22,10 +22,18 @@ const SelectedList = ({
     setBeerList(response)
   }
 
+  const moveBack = () => {
+    setBeerList(null)
+    setBeerListId(null)
+  }
+
   return (
     <>
       <section className="selected-list">
         <div className="selected-list=wrapper">
+          <p onClick={moveBack} className="back-button">
+            Back
+          </p>
           <h2>{beerList ? beerList.data.name : null}</h2>
           {beerList
             ? beerList.data.beers.map((beer) => (
