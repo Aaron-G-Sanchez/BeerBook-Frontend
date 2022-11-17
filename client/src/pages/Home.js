@@ -76,9 +76,23 @@ const Home = ({
               />
             )
           } else if (beerListId) {
-            return <SelectedList beerList={beerList} beerListId={beerListId} />
+            return (
+              <SelectedList
+                user={user}
+                beerList={beerList}
+                beerListId={beerListId}
+              />
+            )
           } else {
-            return <ListFeed feed={feed} />
+            return (
+              <ListFeed
+                feed={feed}
+                setToggle={setToggle}
+                setFormValue={setFormValue}
+                setBeerListId={setBeerListId}
+                setBeerList={setBeerList}
+              />
+            )
           }
         })()}
 

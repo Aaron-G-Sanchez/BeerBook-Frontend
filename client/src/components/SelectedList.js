@@ -1,6 +1,6 @@
 import { destroyList } from '../services/Queries'
 
-const SelectedList = ({ beerList, beerListId }) => {
+const SelectedList = ({ user, beerList, beerListId }) => {
   const handleClick = async () => {
     const deleteList = await destroyList(beerListId.id)
     window.location.reload()
@@ -10,9 +10,9 @@ const SelectedList = ({ beerList, beerListId }) => {
     window.location.reload()
   }
 
-  const getBeerId = (id) => {
-    console.log(id)
-  }
+  // const getBeerId = (id) => {
+  //   console.log(id)
+  // }
 
   return (
     <>
@@ -23,33 +23,43 @@ const SelectedList = ({ beerList, beerListId }) => {
             ? beerList.data.beers.map((beer) => (
                 <div className="beer-on-list" key={beer.id}>
                   <p>{beer.name}</p>
-                  <button
+                  {/* <button
                     className="remove-beer"
-                    onClick={() => getBeerId(beer.id)}
+                    // onClick={() => getBeerId(beer.id)}
                   >
                     X
-                  </button>
+                  </button> */}
                 </div>
               ))
             : null}
 
-          <div className="list-controls">
-            <button className="save-list" onClick={saveList}>
-              Save
-            </button>
-            <button
-              className="delete-button"
-              onClick={() => {
-                if (
-                  window.confirm('Are you sure you want to delete this list?')
-                ) {
-                  handleClick()
-                }
-              }}
-            >
-              Delete
-            </button>
-          </div>
+          {(() => {
+            if (beerList) {
+              if (user.id === beerList.data.userId) {
+                return (
+                  <div className="list-controls">
+                    <button className="save-list" onClick={saveList}>
+                      Save
+                    </button>
+                    <button
+                      className="delete-button"
+                      onClick={() => {
+                        if (
+                          window.confirm(
+                            'Are you sure you want to delete this list?'
+                          )
+                        ) {
+                          handleClick()
+                        }
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                )
+              }
+            }
+          })()}
         </div>
       </section>
     </>
