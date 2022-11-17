@@ -30,12 +30,12 @@ const SelectedList = ({
             ? beerList.data.beers.map((beer) => (
                 <div className="beer-on-list" key={beer.id}>
                   <p>{beer.name}</p>
-                  {/* <button
+                  <button
                     className="remove-beer"
                     // onClick={() => getBeerId(beer.id)}
                   >
                     X
-                  </button> */}
+                  </button>
                 </div>
               ))
             : null}
