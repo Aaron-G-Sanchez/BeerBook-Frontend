@@ -27,7 +27,7 @@ const ListFeed = ({
                 onClick={() => selectList(list)}
               >
                 <p className="list-name">{list.name}</p>
-                <p>By: {list.creator.name}</p>
+                <p>By: {list.name}</p>
               </div>
             ))
           : null}
