@@ -262,6 +262,16 @@ overflow: auto;
   scale: 1.1;
 }
 
+.back-button {
+  color: #8AA555;
+  font-weight: bolder;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* NEW USER LIST */
 
 .save-list{

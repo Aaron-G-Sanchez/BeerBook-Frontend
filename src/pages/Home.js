@@ -29,7 +29,6 @@ const Home = ({
   const [formValue, setFormValue] = useState(initialState)
   const [beerListId, setBeerListId] = useState(null)
   const [beerList, setBeerList] = useState(null)
-  // const [data, setData] = useState()
 
   const getListFeed = async () => {
     const feed = await getFeed()
@@ -40,6 +39,7 @@ const Home = ({
     const beer = await getAllBeers()
     setBeer(beer)
   }
+
   const userId = async () => {
     if (user) {
       let id = user.id
@@ -75,6 +75,8 @@ const Home = ({
                 beerList={beerList}
                 setBeerList={setBeerList}
                 setBeerListId={setBeerListId}
+                getListFeed={getListFeed}
+                userId={userId}
               />
             )
           } else if (beerListId) {
@@ -85,6 +87,8 @@ const Home = ({
                 beerListId={beerListId}
                 setBeerListId={setBeerListId}
                 setBeerList={setBeerList}
+                setFeed={setFeed}
+                getListFeed={getListFeed}
               />
             )
           } else {

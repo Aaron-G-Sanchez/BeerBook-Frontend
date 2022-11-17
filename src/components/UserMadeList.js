@@ -21,6 +21,7 @@ const UserMadeList = ({
     const response = await getBeerListById(list.id)
     setBeerList(response)
   }
+
   return (
     <>
       <section className="user-made-lists">

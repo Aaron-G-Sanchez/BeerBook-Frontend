@@ -5,6 +5,7 @@ const SelectedBeer = ({ selectedBeer, beerListId, setBeerList, user }) => {
     const response = await addBeerToList(beerListId.id, {
       beerId: selectedBeer.id
     })
+
     setBeerList(response)
   }
 
