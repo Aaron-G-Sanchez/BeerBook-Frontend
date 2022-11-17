@@ -11,6 +11,7 @@ const UserMadeList = ({
   const handleClick = () => {
     setToggle(!toggle)
     setBeerListId(null)
+    setBeerList(null)
   }
 
   const selectList = async (list) => {

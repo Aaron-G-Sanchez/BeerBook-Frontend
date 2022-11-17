@@ -73,6 +73,8 @@ const Home = ({
                 formValue={formValue}
                 setFormValue={setFormValue}
                 beerList={beerList}
+                setBeerList={setBeerList}
+                setBeerListId={setBeerListId}
               />
             )
           } else if (beerListId) {
@@ -81,6 +83,8 @@ const Home = ({
                 user={user}
                 beerList={beerList}
                 beerListId={beerListId}
+                setBeerListId={setBeerListId}
+                setBeerList={setBeerList}
               />
             )
           } else {
