@@ -1,7 +1,14 @@
-const NewList = ({ formValue, setFormValue, beerList }) => {
+const NewList = ({
+  formValue,
+  setFormValue,
+  beerList,
+  setBeerList,
+  setBeerListId
+}) => {
   const handleClick = () => {
     setFormValue('')
-    window.location.reload()
+    setBeerList(null)
+    setBeerListId(null)
   }
   return (
     <>

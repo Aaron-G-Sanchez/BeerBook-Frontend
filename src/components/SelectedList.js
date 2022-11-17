@@ -1,13 +1,20 @@
 import { destroyList } from '../services/Queries'
 
-const SelectedList = ({ user, beerList, beerListId }) => {
+const SelectedList = ({
+  user,
+  beerList,
+  beerListId,
+  setBeerListId,
+  setBeerList
+}) => {
   const handleClick = async () => {
     const deleteList = await destroyList(beerListId.id)
     window.location.reload()
   }
 
   const saveList = () => {
-    window.location.reload()
+    setBeerListId(null)
+    setBeerList(null)
   }
 
   // const getBeerId = (id) => {
