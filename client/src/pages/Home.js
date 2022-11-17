@@ -35,7 +35,6 @@ const Home = ({
     const feed = await getFeed()
     setFeed(feed)
   }
-  console.log(feed)
 
   const getBeer = async () => {
     const beer = await getAllBeers()
@@ -55,7 +54,6 @@ const Home = ({
     userId()
   }, [user])
 
-  console.log(beerListId)
   return user ? (
     <>
       <main className="user-dash">

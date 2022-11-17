@@ -7,7 +7,7 @@ const SelectedBeer = ({ selectedBeer, beerListId, setBeerList }) => {
     })
     setBeerList(response)
   }
-  console.log(beerListId)
+
   return (
     <>
       <section>
