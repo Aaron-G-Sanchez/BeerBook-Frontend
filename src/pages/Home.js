@@ -118,6 +118,7 @@ const Home = ({
           setSelectedBeer={setSelectedBeer}
           beerListId={beerListId}
           setBeerList={setBeerList}
+          user={user}
         />
         <UserMadeList
           data={data}

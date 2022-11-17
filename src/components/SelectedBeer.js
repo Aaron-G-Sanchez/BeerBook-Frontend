@@ -1,6 +1,6 @@
 import { addBeerToList } from '../services/Queries'
 
-const SelectedBeer = ({ selectedBeer, beerListId, setBeerList }) => {
+const SelectedBeer = ({ selectedBeer, beerListId, setBeerList, user }) => {
   const handleClick = async () => {
     const response = await addBeerToList(beerListId.id, {
       beerId: selectedBeer.id
@@ -20,7 +20,7 @@ const SelectedBeer = ({ selectedBeer, beerListId, setBeerList }) => {
               ABV: <span>{selectedBeer.abv}</span>
             </p>
             <p>Style: {selectedBeer.style}</p>
-            {beerListId ? (
+            {beerListId && user.id === beerListId.userId ? (
               <button className="add-to-list" onClick={handleClick}>
                 Add to list!
               </button>
