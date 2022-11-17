@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="client/public/assets/images/beerbook_logo.svg" alt="title_logo"/>
+  <img src="public/assets/images/beerbook_logo.svg" alt="title_logo"/>
 </p>
 
 # <p align="center"> Welcome To BeerBook <p>
@@ -28,7 +28,7 @@
 
 ### <p align="center">**_Technologies Used_**<p>
 
-![Logos](client/public/assets/images/BeerBook_Logos_for_README.png)
+![Logos](public/assets/images/BeerBook_Logos_for_README.png)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ---
 
-## ![screenshot](client/public/assets/images/Screen_Shot_BeerBook.png)
+## ![screenshot](public/assets/images/Screen_Shot_BeerBook.png)
 
 ### **_Future Updates_**
 
