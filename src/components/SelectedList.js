@@ -1,4 +1,4 @@
-import { destroyList } from '../services/Queries'
+import { destroyList, removeBeerFromList } from '../services/Queries'
 
 const SelectedList = ({
   user,
@@ -17,9 +17,10 @@ const SelectedList = ({
     setBeerList(null)
   }
 
-  // const getBeerId = (id) => {
-  //   console.log(id)
-  // }
+  const getBeerId = async (id) => {
+    const response = await removeBeerFromList(beerListId.id, id)
+    setBeerList(response)
+  }
 
   return (
     <>
@@ -30,12 +31,14 @@ const SelectedList = ({
             ? beerList.data.beers.map((beer) => (
                 <div className="beer-on-list" key={beer.id}>
                   <p>{beer.name}</p>
-                  {/* <button
-                    className="remove-beer"
-                    // onClick={() => getBeerId(beer.id)}
-                  >
-                    X
-                  </button> */}
+                  {user.id === beerList.data.userId ? (
+                    <button
+                      className="remove-beer"
+                      onClick={() => getBeerId(beer.id)}
+                    >
+                      X
+                    </button>
+                  ) : null}
                 </div>
               ))
             : null}

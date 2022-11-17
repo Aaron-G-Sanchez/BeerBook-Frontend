@@ -29,7 +29,6 @@ export const getUser = async (id) => {
   }
 }
 
-// Call to create a new list
 export const createBeerList = async (data) => {
   try {
     const response = await Client.post('/beerlist', data)
@@ -60,6 +59,15 @@ export const getBeerListById = async (id) => {
 export const destroyList = async (id) => {
   try {
     const response = await Client.delete(`/beerlist/${id}`)
+    return response
+  } catch (error) {
+    throw error
+  }
+}
+
+export const removeBeerFromList = async (listId, beerId) => {
+  try {
+    const response = await Client.delete(`/beerlist/${listId}/${beerId}`)
     return response
   } catch (error) {
     throw error
