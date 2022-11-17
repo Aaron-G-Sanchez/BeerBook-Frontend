@@ -3,12 +3,16 @@ const NewList = ({
   setFormValue,
   beerList,
   setBeerList,
-  setBeerListId
+  setBeerListId,
+  getListFeed,
+  userId
 }) => {
   const handleClick = () => {
     setFormValue('')
     setBeerList(null)
     setBeerListId(null)
+    getListFeed()
+    userId()
   }
   return (
     <>
