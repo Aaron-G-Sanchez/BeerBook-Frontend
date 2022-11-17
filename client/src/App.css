@@ -247,6 +247,20 @@ overflow: auto;
   border-radius: 15px;
 }
 
+/* SELECTED LIST  */
+
+.delete-button {
+  width: 20%;
+  height: 30px;
+  background-color: #ffd100;
+  border-radius: 15px;
+  border: none;
+  transition: .5s;
+}
+
+.delete-button:hover {
+  scale: 1.1;
+}
 
 /* NEW USER LIST */
 
@@ -356,8 +370,11 @@ overflow: auto;
 }
 
 .add-to-list {
+  width: 20%;
+  height: 30px;
   background-color: #ffd100;
   border: none;
+  border-radius: 15px;
   transition: .3s;
   margin: 10px;
 }
@@ -404,10 +421,11 @@ overflow: auto;
 .list-wrapper {
 display: flex;
 align-items: center;
+justify-content: space-between;
 flex-wrap: wrap;
 width: 80%;
-gap: 10%;
-margin: 5% auto;
+gap: 10px;
+margin: auto;
 }
 
 .users-list {
@@ -423,6 +441,7 @@ width: 20%;
 height: 8%;
 border-radius: 15px;
 background-color: #ffd100;
+background-image: none;
 color: #333533;
 border: none;
 transition: .5s;
