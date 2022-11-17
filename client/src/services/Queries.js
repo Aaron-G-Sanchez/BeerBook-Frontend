@@ -56,3 +56,12 @@ export const getBeerListById = async (id) => {
     throw error
   }
 }
+
+export const destroyList = async (id) => {
+  try {
+    const response = await Client.delete(`/beerlist/${id}`)
+    return response
+  } catch (error) {
+    throw error
+  }
+}

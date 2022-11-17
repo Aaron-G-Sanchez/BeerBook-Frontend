@@ -10,6 +10,7 @@ const UserMadeList = ({
 }) => {
   const handleClick = () => {
     setToggle(!toggle)
+    setBeerListId(null)
   }
 
   const selectList = async (list) => {
@@ -31,7 +32,7 @@ const UserMadeList = ({
                   className="users-list"
                   onClick={() => selectList(list)}
                 >
-                  {list.name}{' '}
+                  <h4>{list.name} </h4>
                 </div>
               ))
             : null}

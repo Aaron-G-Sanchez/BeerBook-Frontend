@@ -35,7 +35,6 @@ const Home = ({
     const feed = await getFeed()
     setFeed(feed)
   }
-  console.log(feed)
 
   const getBeer = async () => {
     const beer = await getAllBeers()
@@ -55,7 +54,6 @@ const Home = ({
     userId()
   }, [user])
 
-  console.log(beerListId)
   return user ? (
     <>
       <main className="user-dash">
@@ -78,9 +76,23 @@ const Home = ({
               />
             )
           } else if (beerListId) {
-            return <SelectedList beerList={beerList} />
+            return (
+              <SelectedList
+                user={user}
+                beerList={beerList}
+                beerListId={beerListId}
+              />
+            )
           } else {
-            return <ListFeed feed={feed} />
+            return (
+              <ListFeed
+                feed={feed}
+                setToggle={setToggle}
+                setFormValue={setFormValue}
+                setBeerListId={setBeerListId}
+                setBeerList={setBeerList}
+              />
+            )
           }
         })()}
 
