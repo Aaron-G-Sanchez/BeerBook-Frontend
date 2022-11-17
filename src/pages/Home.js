@@ -116,6 +116,7 @@ const Home = ({
         ) : (
           <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
         )}
+
         <SelectedBeer
           beer={beer}
           selectedBeer={selectedBeer}

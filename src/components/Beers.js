@@ -1,15 +1,19 @@
 const Beers = ({ beer, setSelectedBeer }) => {
-  // Gets the beer id when the div is clicked
   const selectBeer = (id) => {
     if (beer) {
       setSelectedBeer(beer.data.find((beer) => beer.id === id))
     }
   }
 
+  const handleClick = () => {}
+
   return (
     <>
       <section className="beer-list">
         <h1>Beer</h1>
+        <div className="button-wrapper">
+          <button className="add-beer-button">Add a beer!</button>
+        </div>
         <div className="beer-wrapper">
           {beer
             ? beer.data.map((beer) => (
