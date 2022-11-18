@@ -30,8 +30,8 @@ const NewBeerForm = ({ setNewBeer, setBeer }) => {
   return (
     <>
       <section className="beer-form">
-        <h2>New Beer Form</h2>
-        <form onSubmit={handleSubmit}>
+        <h2 className="beer-form-title">New Beer Form</h2>
+        <form onSubmit={handleSubmit} className="beer-form-wrapper">
           <input
             onChange={handleChange}
             name="name"
@@ -72,7 +72,9 @@ const NewBeerForm = ({ setNewBeer, setBeer }) => {
             type="text"
             placeholder="Beer Image"
           />
-          <button type="submit">Add Beer</button>
+          <button type="submit" className="beer-form-button">
+            Add Beer
+          </button>
         </form>
       </section>
     </>
