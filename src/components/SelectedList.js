@@ -30,11 +30,14 @@ const SelectedList = ({
   return (
     <>
       <section className="selected-list">
+        <p onClick={moveBack} className="back-button">
+          Back
+        </p>
+        <h2 className="selected-list-title">
+          {beerList ? beerList.data.name : null}
+        </h2>
+
         <div className="selected-list-wrapper">
-          <p onClick={moveBack} className="back-button">
-            Back
-          </p>
-          <h2>{beerList ? beerList.data.name : null}</h2>
           {beerList
             ? beerList.data.beers.map((beer) => (
                 <div className="beer-on-list" key={beer.id}>
@@ -50,13 +53,12 @@ const SelectedList = ({
                 </div>
               ))
             : null}
-
           {(() => {
             if (beerList) {
               if (user.id === beerList.data.userId) {
                 return (
                   <div className="list-controls">
-                    <button className="save-list" onClick={saveList}>
+                    <button className="save-list-button" onClick={saveList}>
                       Save
                     </button>
                     <button

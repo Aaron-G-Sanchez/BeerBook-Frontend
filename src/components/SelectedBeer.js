@@ -23,13 +23,13 @@ const SelectedBeer = ({ selectedBeer, beerListId, setBeerList, user }) => {
             <p>Style: {selectedBeer.style}</p>
             {beerListId && user.id === beerListId.userId ? (
               <button className="add-to-list" onClick={handleClick}>
-                Add to list!
+                Add to list
               </button>
             ) : null}
           </div>
         ) : (
           <div className="beer-guide">
-            <h2>Select a beer for more info!</h2>
+            <h2>Select a beer for more info</h2>
           </div>
         )}
       </section>
