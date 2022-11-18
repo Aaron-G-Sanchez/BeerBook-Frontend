@@ -25,8 +25,7 @@ const NewList = ({
                   <p>{beer.name}</p>
                 </div>
               ))
-            : // <div>no beer yet</div>
-              null}
+            : null}
         </div>
         {beerList ? (
           <div>
