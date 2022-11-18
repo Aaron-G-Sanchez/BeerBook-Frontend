@@ -9,6 +9,7 @@ import SelectedBeer from '../components/SelectedBeer'
 import CreateNewList from '../components/CreateNewList'
 import NewList from '../components/NewList'
 import SelectedList from '../components/SelectedList'
+import NewBeerForm from '../components/NewBeerForm'
 
 const Home = ({
   user,
@@ -29,6 +30,7 @@ const Home = ({
   const [formValue, setFormValue] = useState(initialState)
   const [beerListId, setBeerListId] = useState(null)
   const [beerList, setBeerList] = useState(null)
+  const [newBeer, setNewBeer] = useState(false)
 
   const getListFeed = async () => {
     const feed = await getFeed()
@@ -99,12 +101,13 @@ const Home = ({
                 setFormValue={setFormValue}
                 setBeerListId={setBeerListId}
                 setBeerList={setBeerList}
+                setNewBeer={setNewBeer}
               />
             )
           }
         })()}
 
-        {toggle ? (
+        {/* {toggle ? (
           <CreateNewList
             user={user}
             toggle={toggle}
@@ -115,7 +118,32 @@ const Home = ({
           />
         ) : (
           <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
-        )}
+        )} */}
+
+        {(() => {
+          if (toggle) {
+            return (
+              <CreateNewList
+                user={user}
+                toggle={toggle}
+                setToggle={setToggle}
+                formValue={formValue}
+                setFormValue={setFormValue}
+                setBeerListId={setBeerListId}
+              />
+            )
+          } else if (!toggle && newBeer) {
+            return <NewBeerForm setNewBeer={setNewBeer} setBeer={setBeer} />
+          } else {
+            return (
+              <Beers
+                beer={beer}
+                setSelectedBeer={setSelectedBeer}
+                setNewBeer={setNewBeer}
+              />
+            )
+          }
+        })()}
 
         <SelectedBeer
           beer={beer}
@@ -132,6 +160,7 @@ const Home = ({
           setBeerListId={setBeerListId}
           setBeerList={setBeerList}
           setFormValue={setFormValue}
+          setNewBeer={setNewBeer}
         />
         <UserInfo data={data} user={user} handleLogOut={handleLogOut} />
       </main>

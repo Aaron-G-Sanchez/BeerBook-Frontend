@@ -219,6 +219,13 @@ overflow: auto;
 
 }
 
+.beer-form {
+  grid-row: 1/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .user-made-lists{
   overflow: auto;
 }
