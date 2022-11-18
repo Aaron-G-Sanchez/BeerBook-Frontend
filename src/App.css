@@ -419,16 +419,25 @@ scale: 1.03;
 .button-wrapper{
   display: flex;
   align-self: flex-end;
-  margin-right: 10%;
-  margin-bottom: 2%;
+  margin-right: 3%;
+  margin-bottom: 1%;
+  width: 10%;
 }
 
 .add-beer-button {
-  width: 100%;
-  height: 150%;
+  width: 80%;
+  height: 30px;
   border-radius: 15px;
-  background-color: #ffd100;
+  background-color: rgba(138, 165, 85, .6);
+  background-image: none;
   border: none;
+  transition: .3s;
+  font-size: 150%;
+  line-height: 100%;
+}
+
+.add-beer-button:hover {
+  scale: 1.05;
 }
 
 .beer-wrapper {
@@ -476,6 +485,41 @@ scale: 1.03;
 
 .beer-maker {
   margin: 0 5px;
+}
+
+
+/* NEW BEER FORM */
+
+.beer-form-title {
+  margin-bottom: 10%;
+}
+
+.beer-form-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.beer-form-wrapper > input {
+  width: 100%;
+  height: 30px;
+}
+
+.beer-form-button {
+  background-color: #ffd100;
+  /* background-image: none; */
+  height: 30px;
+  width: 30%;
+  border-radius: 15px;
+  border: none;
+  transition: .3s;
+}
+
+.beer-form-button:hover {
+  background-color: #d6d6d6;
+  scale: 1.1
 }
 
 
@@ -600,7 +644,7 @@ margin: auto;
 width: 20%;
 height: 8%;
 border-radius: 15px;
-background-color: #ffd100;
+background-color: rgba(138, 165, 85, .6);
 background-image: none;
 color: #333533;
 border: none;
@@ -609,8 +653,7 @@ font-size: 150%;
 }
 
 .add-list-button:hover {
-  background-color: #ffd100;
-  scale: 1.1;
+  scale: 1.05;
 }
 
 
