@@ -19,20 +19,24 @@ const ListFeed = ({
   return (
     <>
       <section className="list-feed">
-        <h2>Recent Lists</h2>
+        <h2 className="feed-title">Recent Lists</h2>
 
-        {feed
-          ? feed.data.map((list) => (
-              <div
-                key={list.id}
-                className="list"
-                onClick={() => selectList(list)}
-              >
-                <p className="list-name">{list.name}</p>
-                <p>By: {list.name}</p>
-              </div>
-            ))
-          : null}
+
+        <div className="feed-wrapper">
+          {feed
+            ? feed.data.map((list) => (
+                <div
+                  key={list.id}
+                  className="list"
+                  onClick={() => selectList(list)}
+                >
+                  <p className="list-name">{list.name}</p>
+                  <p>By: {list.creator.name}</p>
+                </div>
+              ))
+            : null}
+        </div>
+
       </section>
     </>
   )
