@@ -30,7 +30,7 @@ const SelectedList = ({
   return (
     <>
       <section className="selected-list">
-        <div className="selected-list=wrapper">
+        <div className="selected-list-wrapper">
           <p onClick={moveBack} className="back-button">
             Back
           </p>
