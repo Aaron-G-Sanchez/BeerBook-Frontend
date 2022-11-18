@@ -547,7 +547,7 @@ scale: 1.03;
 
 .log-out {
   width: 40%;
-  background-color: #d6d6d6;
+  background-color: rgba(138, 165, 85, .6);
   background-image: none;
   height: 30px;
   transition: .3s;
