@@ -34,13 +34,13 @@
 
 ### **_Getting Started_**
 
-#### - Take a look around the existing beer lists.
+#### Start by creating a new user and signing in to the app. Then you can browse beers, add new beers, create new lists, and add beers to the lists. Also you can view other users lists.
 
-#### - Create your own list of most and least guzzleable beers.
+#### A pitch deck was used to present this project and can be viewed [here](https://docs.google.com/presentation/d/14YlfIaqDq6j2ZgGs1zMLbsPEgDB0X9C8f-aLPZftkTo/edit#slide=id.g188b240b0ef_0_122).
 
-#### - Add in new local brews.
+#### A Trello board was used to track development progress and can be viewed [here](https://trello.com/b/to67FhS9/beerbook).
 
-#### The project itself was deployed with Heroku.
+#### The project itself was deployed with Heroku and can be viewed [here](https://beerbook-frontend.herokuapp.com/).
 
 ---
 
@@ -50,12 +50,14 @@
 
 - [x] Deploy project
 - [ ] Add user follower functionallity
-- [ ] Responzive design to work for any screen
+- [ ] Responsive design to work for any screen
 
 ---
 
 ### **_Credits_**
 
 ##### General Assembly: [Choose Your Path](https://generalassemb.ly/)
+
+##### Favicon: [Flaticon.com](https://www.flaticon.com/free-icons/hop)
 
 ---
