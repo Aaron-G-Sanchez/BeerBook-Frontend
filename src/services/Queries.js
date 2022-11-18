@@ -10,6 +10,15 @@ export const getFeed = async () => {
   }
 }
 
+export const getNewBeers = async () => {
+  try {
+    const response = await Client.get('/beer/recent')
+    return response
+  } catch (error) {
+    throw error
+  }
+}
+
 // Gets all the beers in the database
 export const getAllBeers = async () => {
   try {
@@ -69,6 +78,15 @@ export const removeBeerFromList = async (listId, beerId) => {
   try {
     const response = await Client.delete(`/beerlist/${listId}/${beerId}`)
     return response
+  } catch (error) {
+    throw error
+  }
+}
+
+export const newBeer = async (data) => {
+  try {
+    const res = await Client.post('/beer/new', data)
+    return res.data
   } catch (error) {
     throw error
   }

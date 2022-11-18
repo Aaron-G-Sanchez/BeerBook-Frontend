@@ -5,12 +5,14 @@ const ListFeed = ({
   setToggle,
   setFormValue,
   setBeerListId,
-  setBeerList
+  setBeerList,
+  setNewBeer
 }) => {
   const selectList = async (list) => {
     setFormValue('')
     setToggle(false)
     setBeerListId(list)
+    setNewBeer(false)
     const response = await getBeerListById(list.id)
     setBeerList(response)
   }
@@ -18,6 +20,7 @@ const ListFeed = ({
     <>
       <section className="list-feed">
         <h2 className="feed-title">Recent Lists</h2>
+
 
         <div className="feed-wrapper">
           {feed
@@ -33,6 +36,7 @@ const ListFeed = ({
               ))
             : null}
         </div>
+
       </section>
     </>
   )

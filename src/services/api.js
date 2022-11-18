@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-export const BASE_URL = 'https://beerbook-backend.herokuapp.com/' //http://localhost:3001
+export const BASE_URL = 'https://beerbook-backend.herokuapp.com/'
 const Client = Axios.create({ baseURL: BASE_URL })
 
 Client.interceptors.request.use(
