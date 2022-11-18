@@ -289,6 +289,21 @@ overflow: auto;
 
 /* ALL BEERS DISPLAY */
 
+.button-wrapper{
+  display: flex;
+  align-self: flex-end;
+  margin-right: 10%;
+  margin-bottom: 2%;
+}
+
+.add-beer-button {
+  width: 100%;
+  height: 150%;
+  border-radius: 15px;
+  background-color: #ffd100;
+  border: none;
+}
+
 .beer-wrapper {
   overflow: auto;
   width: 100%;
@@ -296,7 +311,8 @@ overflow: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px
+  gap: 30px;
+  margin: 2% 0;
 }
 
 .beer-wrapper::-webkit-scrollbar {
