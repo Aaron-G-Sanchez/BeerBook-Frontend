@@ -1,11 +1,9 @@
 import { useState } from 'react'
 import { getNewBeers, newBeer } from '../services/Queries'
-import { useNavigate } from 'react-router-dom'
 
 const NewBeerForm = ({ setNewBeer, setBeer }) => {
   const initialState = { name: '', style: '', abv: 0.0, brewery: '', image: '' }
   const [formValues, setFormValues] = useState(initialState)
-  let navigate = useNavigate()
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
@@ -24,7 +22,6 @@ const NewBeerForm = ({ setNewBeer, setBeer }) => {
     setBeer(updatedBeers)
     setFormValues(initialState)
     setNewBeer(false)
-    // navigate('/home')
   }
 
   return (

@@ -59,15 +59,6 @@ const Home = ({
   return user ? (
     <>
       <main className="user-dash">
-        {/* /{formValue.name ? (
-          <NewList
-            formValue={formValue}
-            setFormValue={setFormValue}
-            beerList={beerList}
-          />
-        ) : (
-          <ListFeed feed={feed} />
-        )}  */}
         {(() => {
           if (formValue.name) {
             return (
@@ -106,19 +97,6 @@ const Home = ({
             )
           }
         })()}
-
-        {/* {toggle ? (
-          <CreateNewList
-            user={user}
-            toggle={toggle}
-            setToggle={setToggle}
-            formValue={formValue}
-            setFormValue={setFormValue}
-            setBeerListId={setBeerListId}
-          />
-        ) : (
-          <Beers beer={beer} setSelectedBeer={setSelectedBeer} />
-        )} */}
 
         {(() => {
           if (toggle) {

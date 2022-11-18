@@ -18,7 +18,6 @@ const UserInfo = ({ data, handleLogOut }) => {
         </div>
         <div className="user-info-container">
           <h2>{data ? data.name : null}</h2>
-          {/* <p>{data?.email}</p> */}
           <button onClick={handleClick} className="log-out">
             Log Out
           </button>
