@@ -6,18 +6,21 @@ const UserMadeList = ({
   setToggle,
   setBeerListId,
   setBeerList,
-  setFormValue
+  setFormValue,
+  setNewBeer
 }) => {
   const handleClick = () => {
     setToggle(!toggle)
     setBeerListId(null)
     setBeerList(null)
+    setNewBeer(false)
   }
 
   const selectList = async (list) => {
     setFormValue('')
     setToggle(false)
     setBeerListId(list)
+    setNewBeer(false)
     const response = await getBeerListById(list.id)
     setBeerList(response)
   }

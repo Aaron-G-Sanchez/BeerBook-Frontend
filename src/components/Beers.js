@@ -1,18 +1,22 @@
-const Beers = ({ beer, setSelectedBeer }) => {
+const Beers = ({ beer, setSelectedBeer, setNewBeer }) => {
   const selectBeer = (id) => {
     if (beer) {
       setSelectedBeer(beer.data.find((beer) => beer.id === id))
     }
   }
 
-  const handleClick = () => {}
+  const handleClick = () => {
+    setNewBeer(true)
+  }
 
   return (
     <>
       <section className="beer-list">
         <h1>Beer</h1>
         <div className="button-wrapper">
-          <button className="add-beer-button">Add a beer!</button>
+          <button onClick={handleClick} className="add-beer-button">
+            +
+          </button>
         </div>
         <div className="beer-wrapper">
           {beer

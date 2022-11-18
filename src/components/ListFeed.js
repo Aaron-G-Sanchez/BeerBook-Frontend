@@ -5,12 +5,14 @@ const ListFeed = ({
   setToggle,
   setFormValue,
   setBeerListId,
-  setBeerList
+  setBeerList,
+  setNewBeer
 }) => {
   const selectList = async (list) => {
     setFormValue('')
     setToggle(false)
     setBeerListId(list)
+    setNewBeer(false)
     const response = await getBeerListById(list.id)
     setBeerList(response)
   }
